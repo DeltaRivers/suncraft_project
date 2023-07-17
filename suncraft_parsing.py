@@ -23,11 +23,14 @@ def cat(imported_dict, id, string = True):
         for i in imported_dict[id]["Categories"]["data"]:
             listed.append(imported_dict[id]["Categories"]["data"][counter]["attributes"]["name_category"])
             counter += 1
-    except Exception as error:
-        output = error
+        if string:
+            output = f"Categories: {string_it(listed)}\n"
+        else:
+            output = listed
 
-    output = f"Category: {string_it(listed)}\n"
-    return output
+    except Exception as error:
+        print(error)
+        output = "Error\n"
 
 def subcat(imported_dict, id, string = True):
     counter = 0
@@ -36,11 +39,14 @@ def subcat(imported_dict, id, string = True):
         for i in imported_dict[id]["subcategories"]["data"]:
             listed.append(imported_dict[id]["subcategories"]["data"][counter]["attributes"]["name"])
             counter += 1
-    except Exception as error:
-        output = error
+        if string:
+            output = f"Subcategores: {string_it(listed)}\n"
+        else:
+            output = listed
 
-    output = f"Subcategory: {string_it(listed)}\n"
-    return output
+    except Exception as error:
+        print(error)
+        output = "Error\n"
 
 def tags(imported_dict, id, string = True):
     counter = 0
@@ -55,7 +61,8 @@ def tags(imported_dict, id, string = True):
             output = listed
 
     except Exception as error:
-        output = error
+        print(error)
+        output = "Error\n"
 
 
     return output
@@ -110,5 +117,8 @@ def file_handeling(dict_file = str, inputloop = False):
     return imported_dict
 
 def catsubtag_block(imported_dict, id):
-    output = f"   {cat(id, imported_dict)}{subcat(id, imported_dict)}       {tags(id, imported_dict)}"
+    output = f"   {cat(imported_dict, id)}{subcat(imported_dict, id)}       {tags(imported_dict, id)}"
     return output
+
+
+
