@@ -12,11 +12,11 @@ def admin_url(id):
     url = "https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/" + id
     return url
 
-def live_url(id, imported_dict):
+def live_url(imported_dict, id, string = True):
     url = "https://suncraftind.com/catalog/" + imported_dict[id]["slug_product"]
     return url
 
-def cat(id, imported_dict):
+def cat(imported_dict, id, string = True):
     counter = 0
     listed = []
     try:
@@ -29,7 +29,7 @@ def cat(id, imported_dict):
     output = f"Category: {string_it(listed)}\n"
     return output
 
-def subcat(id, imported_dict):
+def subcat(imported_dict, id, string = True):
     counter = 0
     listed = []
     try:
@@ -42,20 +42,25 @@ def subcat(id, imported_dict):
     output = f"Subcategory: {string_it(listed)}\n"
     return output
 
-def tags(id, imported_dict):
+def tags(imported_dict, id, string = True):
     counter = 0
     listed = []
     try:
         for i in imported_dict[id]["tags"]["data"]:
             listed.append(imported_dict[id]["tags"]["data"][counter]["attributes"]["name"])
             counter += 1
+        if string:
+            output = f"Tags: {string_it(listed)}\n"
+        else:
+            output = listed
+
     except Exception as error:
         output = error
 
-    output = f"Tags: {string_it(listed)}\n"
+
     return output
 
-def items_block(id, imported_dict):
+def items_block(imported_dict, id):
     output = ""
     for items in imported_dict[id]["Colors"]:
         output += f' {items["upc_color"]} | {items["part_number"]}\n'
@@ -104,6 +109,6 @@ def file_handeling(dict_file = str, inputloop = False):
                 exit()
     return imported_dict
 
-def catsubtag_block(id, imported_dict):
+def catsubtag_block(imported_dict, id):
     output = f"   {cat(id, imported_dict)}{subcat(id, imported_dict)}       {tags(id, imported_dict)}"
     return output
