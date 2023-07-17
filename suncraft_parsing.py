@@ -31,6 +31,7 @@ def cat(imported_dict, id, string = True):
     except Exception as error:
         print(error)
         output = "Error\n"
+    return output
 
 def subcat(imported_dict, id, string = True):
     counter = 0
@@ -47,6 +48,7 @@ def subcat(imported_dict, id, string = True):
     except Exception as error:
         print(error)
         output = "Error\n"
+    return output
 
 def tags(imported_dict, id, string = True):
     counter = 0
@@ -63,8 +65,6 @@ def tags(imported_dict, id, string = True):
     except Exception as error:
         print(error)
         output = "Error\n"
-
-
     return output
 
 def items_block(imported_dict, id):
