@@ -71,8 +71,29 @@ def items_block(imported_dict, id):
     output = ""
     for items in imported_dict[id]["Colors"]:
         output += f' {items["upc_color"]} | {items["part_number"]}\n'
-#    output += ("-" * 18) + "\n\n"
     return output
+
+def part(imported_dict, id, string = True):
+    listed = []
+    for items in imported_dict[id]["Colors"]:
+        listed.append(f'{items["part_number"]}')
+    if string:
+        output = f"{string_it(listed)}\n"
+    else:
+        output = listed
+    return output
+
+def upc(imported_dict, id, string = True):
+    listed = []
+    for items in imported_dict[id]["Colors"]:
+        listed.append(f'{items["upc_color"]}')
+    if string:
+        output = f"{string_it(listed)}\n"
+    else:
+        output = listed
+    return output
+
+
 
 def file_handeling(dict_file = str, inputloop = False):
     attempts_other_error = 3
