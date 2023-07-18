@@ -4,7 +4,7 @@ from suncraft_parsing import upc, admin_url, part
 
 body = ""
 
-imported_dict = load(open("SClist_2023_07_18_10:38AM.json"))
+imported_dict = load(open("SClist_2023_07_18_02:15PM.json"))
 
 url_set = set()
 
