@@ -1,7 +1,0 @@
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/163
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/164
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/638
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/600
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/292
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/567
-https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/538
