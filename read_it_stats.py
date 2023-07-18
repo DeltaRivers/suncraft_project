@@ -5,6 +5,10 @@ from suncraft_parsing import items_block, live_url, admin_url, file_handeling, c
 parsed_file_name = "stats"
 suncraft_database_file = "SClist_2023_07_17_08:13AM.json"
 imported_dict = file_handeling(suncraft_database_file, False)
+def undline(string):
+    underlined = ""
+    underlined += f'\n{string}\n{"-" * len(string)}\n'
+    return underlined
 
 body = "" 
 all_cat = set()
@@ -23,15 +27,15 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     all_subcat.update(subcat(imported_dict, pages_id, False))
     all_tags.update(tags(imported_dict, pages_id, False))
 
-body += "Catagories:\n"
+body += undline("Catagories:")
 for i in all_cat:
     body += i + "\n"
 
-body += "\nSubcatagories:\n"
+body += "\n" + undline("Subcatagories:")
 for i in all_subcat:
     body += i + "\n"
 
-body += "\nTags:\n"
+body += "\n" + undline("Tags:")
 for i in all_tags:
     body += i + "\n"
 
