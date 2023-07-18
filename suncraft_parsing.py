@@ -117,7 +117,7 @@ def file_handeling(dict_file = str, inputloop = False):
     return imported_dict
 
 def catsubtag_block(imported_dict, id):
-    output = f"   {cat(imported_dict, id)}{subcat(imported_dict, id)}       {tags(imported_dict, id)}"
+    output = f"  {cat(imported_dict, id)}{subcat(imported_dict, id)}        {tags(imported_dict, id)}"
     return output
 
 

@@ -27,6 +27,8 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     all_subcat.update(subcat(imported_dict, pages_id, False))
     all_tags.update(tags(imported_dict, pages_id, False))
 
+    items_block(suncraft_database_file, pages_id)
+
 body += undline("Catagories:")
 for i in all_cat:
     body += i + "\n"
@@ -44,5 +46,6 @@ for i in all_tags:
 working_file.write(body)
 working_file.close()
 print(f'\nDone: {write_to_this_file} has been saved\n')
+
 
 
