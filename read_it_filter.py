@@ -1,9 +1,8 @@
 from suncraft_parsing import items_block, live_url, admin_url, file_handeling, catsubtag_block, tags, subcat, cat
 
-
 # Variables
 parsed_file_name = "filter"
-suncraft_database_file = "SClist_2023_07_17_08:13AM.json"
+suncraft_database_file = "SClist_2023_07_17_06:07PM.json"
 imported_dict = file_handeling(suncraft_database_file, False)
 line_length = 18
 big_line = "=" * line_length + "\n"
@@ -39,7 +38,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
         # Discription
         product_page += f'{description}\n\n'
         # items UPC | Part
-        product_page += upc_header + items_block(imported_dict, pages_id)
+        product_page += upc_header + items_block(imported_dict, pages_id) + small_line + "\n"
         body += product_page 
 
 # Writes and closes the file and indicates that the task is compleate

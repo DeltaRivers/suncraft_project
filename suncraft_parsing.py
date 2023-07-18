@@ -71,7 +71,7 @@ def items_block(imported_dict, id):
     output = ""
     for items in imported_dict[id]["Colors"]:
         output += f' {items["upc_color"]} | {items["part_number"]}\n'
-    output += ("-" * 18) + "\n\n"
+#    output += ("-" * 18) + "\n\n"
     return output
 
 def file_handeling(dict_file = str, inputloop = False):
