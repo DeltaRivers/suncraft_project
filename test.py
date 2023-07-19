@@ -8,27 +8,32 @@ body = ""
 meta_dict = {}
 meta_dict_partkeys = {}
 
-for id in imported_dict:
+for pages_id in imported_dict:
     counter = 0
-    for i in imported_dict[id]["Meta"]:
-        meta_dict[imported_dict[id]["Meta"][counter]["name"]] = imported_dict[id]["Meta"][counter]["value"]
+    for i in imported_dict[pages_id]["Meta"]:
+        meta_dict[imported_dict[pages_id]["Meta"][counter]["name"]] = imported_dict[pages_id]["Meta"][counter]["value"]
         counter += 1
 
 for i in meta_dict:
     meta_dict_partkeys[re.sub("[- ]", "", i)] = meta_dict[i]
 
-for id in imported_dict:
-    name = imported_dict[id]["name_product"]
+for pages_id in imported_dict:
+    name = imported_dict[pages_id]["name_product"]
     counter = 0
     block = ""
-    page_parts = part(imported_dict, id, False)
-    page_upcs = upc(imported_dict, id, False)
+    page_parts = part(imported_dict, pages_id, False)
+    page_upcs = upc(imported_dict, pages_id, False)
+    longest = 0
+
+    for i in page_parts:
+        if len(i) > longest:
+            longest = len(i)
 
     for i in page_parts:
         try:
-            block += f'{page_upcs[counter]} | {i} | {meta_dict_partkeys[i]} \n'
+            block += f'{page_upcs[counter]} | {i}{" " * (longest - len(i))} | {meta_dict_partkeys[i]} \n'
         except KeyError:
-            block += f'{page_upcs[counter]} | {i} |\n'
+            block += f'{page_upcs[counter]} | {i}{" " * (longest - len(i))} |\n'
         counter += 1
 
     body += f'{name}\n{block}\n\n'
