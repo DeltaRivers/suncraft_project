@@ -2,7 +2,7 @@ from suncraft_parsing import items_block, live_url, admin_url, import_handeling,
 
 # Variables
 parsed_file_name = "filter"
-suncraft_database_file = "SClist_2023_07_17_06:07PM.json"
+suncraft_database_file = "SClist_2023_07_24_03:36PM.json"
 imported_dict = import_handeling(suncraft_database_file, False)
 line_length = 18
 big_line = "=" * line_length + "\n"
@@ -20,21 +20,26 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     product_page = "" # This holds the information for this loop
     name = imported_dict[pages_id]["name_product"]
     description = imported_dict[pages_id]["description"]
-    
-    for i in ["mb", "MB"]:
+    catagory = cat(imported_dict, pages_id, False)
+    url = (live_url(imported_dict, pages_id))
+    a_url = (admin_url(pages_id))
+
+    for i in ["Bathroom Sink Drains"]:
         any_of_these = i
 
-    if any_of_these in name:
+    if any_of_these in catagory:
         all_cat.update(cat(imported_dict, pages_id, False))
         all_subcat.update(subcat(imported_dict, pages_id, False))
         all_tags.update(tags(imported_dict, pages_id, False))
 
         #Title
-        product_page += f'    {name}\n{big_line}{catsubtag_block(imported_dict, pages_id)}{big_line}\n'     #\nAdmin URL --> {admin_url(pages_id)}\nAdmin URL --> {live_url(pages_id, imported_dict)}\n
+#        product_page += f'    {name}\n{big_line}{catsubtag_block(imported_dict, pages_id)}{big_line}\n'     #\nAdmin URL --> {admin_url(pages_id)}\nAdmin URL --> {live_url(pages_id, imported_dict)}\n
+        product_page += f'{name}\n'     #\nAdmin URL --> {admin_url(pages_id)}\nAdmin URL --> {live_url(pages_id, imported_dict)}\n
+        product_page += f'{a_url}\n\n'
         # Discription
-        product_page += f'{description}\n\n'
+#        product_page += f'{description}\n{small_line}'
         # items UPC | Part
-        product_page += upc_header + items_block(imported_dict, pages_id) + small_line + "\n"
+#        product_page += upc_header + items_block(imported_dict, pages_id) + small_line + "\n"
         body += product_page 
 
 # Creates and/or opens the file to work with.
