@@ -2,7 +2,7 @@ from suncraft_parsing import items_block, live_url, admin_url, import_handeling,
 
 # Variables
 parsed_file_name = "filter"
-suncraft_database_file = "SClist_2023_07_24_03:36PM.json"
+suncraft_database_file = "SClist_2023_07_25_11:28AM.json"
 imported_dict = import_handeling(suncraft_database_file, False)
 line_length = 18
 big_line = "=" * line_length + "\n"
@@ -24,7 +24,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     url = (live_url(imported_dict, pages_id))
     a_url = (admin_url(pages_id))
 
-    for i in ["Bathroom Sink Drains"]:
+    for i in ["Shower Heads"]:
         any_of_these = i
 
     if any_of_these in catagory:
@@ -35,7 +35,12 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
         #Title
 #        product_page += f'    {name}\n{big_line}{catsubtag_block(imported_dict, pages_id)}{big_line}\n'     #\nAdmin URL --> {admin_url(pages_id)}\nAdmin URL --> {live_url(pages_id, imported_dict)}\n
         product_page += f'{name}\n'     #\nAdmin URL --> {admin_url(pages_id)}\nAdmin URL --> {live_url(pages_id, imported_dict)}\n
-        product_page += f'{a_url}\n\n'
+        product_page += f'{imported_dict[pages_id]["slug_product"]}\n'
+#        product_page += f'{a_url}\n\n'
+        product_page += f'{url}\n\n'
+
+
+
         # Discription
 #        product_page += f'{description}\n{small_line}'
         # items UPC | Part
