@@ -1,10 +1,10 @@
-from suncraft_parsing import items_block, live_url, admin_url, file_handeling, catsubtag_block, tags, subcat, cat
+from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat
 
 
 # Variables
 parsed_file_name = "stats"
-suncraft_database_file = "SClist_2023_07_17_08:13AM.json"
-imported_dict = file_handeling(suncraft_database_file, False)
+suncraft_database_file = "SClist_2023_07_25_08:19AM.json"
+imported_dict = import_handeling(suncraft_database_file, False)
 def undline(string):
     underlined = ""
     underlined += f'\n{string}\n{"-" * len(string)}\n'
@@ -27,7 +27,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     all_subcat.update(subcat(imported_dict, pages_id, False))
     all_tags.update(tags(imported_dict, pages_id, False))
 
-    items_block(suncraft_database_file, pages_id)
+    items_block(imported_dict, pages_id)
 
 body += undline("Catagories:")
 for i in all_cat:

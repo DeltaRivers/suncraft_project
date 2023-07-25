@@ -67,7 +67,7 @@ def tags(imported_dict, id, string = True):
         output = "Error\n"
     return output
 
-def items_block(imported_dict, id):
+def items_block(imported_dict, id:str):
     output = ""
     for items in imported_dict[id]["Colors"]:
         output += f' {items["upc_color"]} | {items["part_number"]}\n'
