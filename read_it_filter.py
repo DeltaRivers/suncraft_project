@@ -2,7 +2,7 @@ from suncraft_parsing import items_block, live_url, admin_url, import_handeling,
 
 # Variables
 parsed_file_name = "filter"
-suncraft_database_file = "SClist_2023_07_31_08:47AM.json"
+suncraft_database_file = "SClist_2023_07_31_12:09PM.json"
 imported_dict = import_handeling(suncraft_database_file, False)
 line_length = 18
 big_line = "=" * line_length + "\n"
@@ -25,7 +25,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     url = live_url(imported_dict, pages_id)
     a_url = admin_url(pages_id)
 
-    for i in ["Toilet Accessories", "Tools"]:
+    for i in ["Glass Vessels"]:
         any_of_these = i
 
         if any_of_these in catagory:
@@ -35,12 +35,13 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
 
                 #Page
                 product_page += f'{name}\n'
-                product_page += f'{imported_dict[pages_id]["slug_product"]}\n'
+#                product_page += f'{imported_dict[pages_id]["slug_product"]}\n'
+                product_page += f'{imported_dict[pages_id]["rank"]}\n'
                 product_page += f'{a_url}\n'
                 product_page += f'{url}\n'
                 product_page += f'\n'
 
-        body += product_page 
+    body += product_page 
 
 # Creates and/or opens the file to work with.
 write_to_this_file = f'{parsed_file_name}_{suncraft_database_file.split(".")[0]}.txt'
