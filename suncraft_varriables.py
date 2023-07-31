@@ -1,6 +1,6 @@
 suncraft_database_file = "SClist_2023_07_31_01:41PM.json"
 
-looking_for = ["Shower Accessories"] # Spelling and case sensitive at least at the moment, must be a list
+looking_for = ["Toilet Accessories"] # Spelling and case sensitive at least at the moment, must be a list
 
 type_of_group = "category" # category, subcategory, tag
 

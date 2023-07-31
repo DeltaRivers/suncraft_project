@@ -1,10 +1,9 @@
-from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it
+from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it, file_saving
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
-parsed_file_name = "filter"
+file_name_prefix = "filter"
 imported_dict = import_handeling(suncraft_database_file, False)
-
 body = ""
 all_cat = set()
 all_subcat = set()
@@ -45,10 +44,8 @@ body += "Tags: " + string_it(all_tags) + "\n"
 
 
 # Creates and/or opens the file to work with.
-write_to_this_file = f'{parsed_file_name}_{suncraft_database_file.split(".")[0]}.txt'
-working_file = open(write_to_this_file, "w")
-working_file.write(body)
-working_file.close()
-print(f'\nDone: {write_to_this_file} has been saved\n')
+file_saving(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
+
+
 
 
