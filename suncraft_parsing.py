@@ -164,3 +164,15 @@ def meta_data(imported_dict, id, string = True,):
     else:
         output = listed
     return output
+
+def name(imported_dict, id):
+    output = imported_dict[id]["name_product"]
+    return output
+
+def description(imported_dict, id):
+    output = imported_dict[id]["description"]
+    return output
+
+def sort_rank(imported_dict, id):
+    output = f'{imported_dict[id]["rank"]}\n'
+    return output
