@@ -1,4 +1,4 @@
-from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it, file_saving, meta_data, meta_name
+from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it, file_saving, meta_data, meta_name, meta_name2
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
@@ -13,8 +13,11 @@ all_tags = set()
 for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
     product_page = "" # This holds the information for this loop don't remove it
     
-    meta_dict = {meta_name(imported_dict, pages_id):meta_data(imported_dict, pages_id)}
+    meta_name_list = meta_name2(imported_dict, pages_id, False, "- .")
 
+    meta_data_list = meta_data(imported_dict, pages_id, False)
+    meta_dict = dict(zip(meta_name_list, meta_data_list))
+    print(meta_dict)
 
     all_cat.update(cat(imported_dict, pages_id, False))
     all_subcat.update(subcat(imported_dict, pages_id, False))

@@ -155,6 +155,32 @@ def meta_name(imported_dict, id, string = True):
         output = listed
     return output
 
+def meta_name2(imported_dict, id, string = True, remove = '', replace_with = ''):
+    listed = []
+    clean_list = []
+    for items in imported_dict[id]["Meta"]:
+        listed.append(f'{items["name"]}')
+    
+    for i in listed:
+        this = str(i)
+        for ii in remove:
+            this = this.replace(ii, replace_with)
+        clean_list.append(this)
+        
+    if string:
+        output = f"{string_it(clean_list)}\n"
+    else:
+        output = clean_list
+    return output
+
+
+
+
+
+
+
+
+
 def meta_data(imported_dict, id, string = True,):
     listed = []
     for items in imported_dict[id]["Meta"]:
