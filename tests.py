@@ -11,8 +11,8 @@ def test_everything():
 "Name: SS Clad Top Plastic Popup No Overflow\n"+\
 "------------------------------\n"+\
 "   Categories: Bathroom Sink Drains\n"+\
-"Subcategories: Pop Up\n"+\
-"         Tags: No Overflow, Plastic\n"+\
+"subcategories: Pop Up\n"+\
+"         tags: No Overflow, Plastic\n"+\
 "------------------------------\n"+\
 "Description: Plastic Sink Drain single piece Pop-Up Drain without Overflow Easy Assembly with  with Stainless Steel clad waste seat and plunger, comes complete with lift rod and linkage.\n"+\
 "------------------------------\n"+\

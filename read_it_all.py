@@ -1,4 +1,4 @@
-from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, string_it, file_saving, meta_data, meta_name, part, upc
+from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, list_groups_as_string, name, description, string_it, file_saving, meta_data, meta_name, part, upc
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 
@@ -13,9 +13,9 @@ def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), a
             if len(i) > part_name_length:
                 part_name_length = len(i)
 
-        all_cat.update(cat(imported_dict, pages_id, False))
-        all_subcat.update(subcat(imported_dict, pages_id, False))
-        all_tags.update(tags(imported_dict, pages_id, False))
+        all_cat.update(list_groups_as_string(imported_dict, pages_id,"Categories", False))
+        all_subcat.update(list_groups_as_string(imported_dict, pages_id,"subcategories", False))
+        all_tags.update(list_groups_as_string(imported_dict, pages_id,"tags", False))
 
         meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
         meta_data_list = meta_data(imported_dict, pages_id, False)

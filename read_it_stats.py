@@ -1,4 +1,4 @@
-from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat
+from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, list_groups_as_string
 
 
 # Variables
@@ -23,9 +23,9 @@ working_file = open(write_to_this_file, "w")
 
 # This part is the body of the document and how it's formatted
 for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
-    all_cat.update(cat(imported_dict, pages_id, False))
-    all_subcat.update(subcat(imported_dict, pages_id, False))
-    all_tags.update(tags(imported_dict, pages_id, False))
+    all_cat.update(list_groups_as_string(imported_dict, pages_id,"Categories",False))
+    all_subcat.update(list_groups_as_string(imported_dict, pages_id,"subcategories", False))
+    all_tags.update(list_groups_as_string(imported_dict, pages_id,"tags", False))
 
     items_block(imported_dict, pages_id)
 
