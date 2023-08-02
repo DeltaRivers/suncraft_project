@@ -184,3 +184,6 @@ def description(imported_dict, id):
 def sort_rank(imported_dict, id):
     output = f'{imported_dict[id]["rank"]}\n'
     return output
+
+def line(number, segment = "-"):
+    return (segment * number) + "\n"

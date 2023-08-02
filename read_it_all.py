@@ -1,12 +1,10 @@
-from suncraft_parsing import admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, string_it, file_saving, meta_data, meta_name, part, upc
+from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, string_it, file_saving, meta_data, meta_name, part, upc
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
 file_name_prefix = "all"
 imported_dict = import_handeling(suncraft_database_file, False)
 body = ""
-def line(number, segment = "-"):
-    return (segment * number) + "\n"
     
 all_cat = set()
 all_subcat = set()
@@ -35,7 +33,8 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
 
 
     #Page
-    product_page += line(30) +\
+    product_page += \
+        line(30) +\
         f'Name: {name(imported_dict, pages_id)}\n' +\
         line(30) +\
         catsubtag_block(imported_dict, pages_id) +\

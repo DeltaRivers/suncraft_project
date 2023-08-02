@@ -1,4 +1,4 @@
-from suncraft_parsing import items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it, file_saving
+from suncraft_parsing import part, line, items_block, live_url, admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, sort_rank, string_it, file_saving
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
@@ -9,10 +9,15 @@ all_cat = set()
 all_subcat = set()
 all_tags = set()
 
+
 # This part is the body of the document and how it's formatted
 for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
     product_page = "" # This holds the information for this loop don't remove it
-    
+    part_name_length = 0
+    for i in part(imported_dict, pages_id, False):
+        if len(i) > part_name_length:
+            part_name_length = len(i)
+
     if type_of_group == "category":
         this_group = cat(imported_dict, pages_id, False)
     if type_of_group == "subcategory":
@@ -35,7 +40,17 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
                 product_page += f'{admin_url(pages_id)}\n'
                 product_page += f'{live_url(imported_dict, pages_id)}\n'
                 product_page += f'\n'
-    
+
+                product_page += \
+                    line(30) +\
+                    f'Name: {name(imported_dict, pages_id)}\n' +\
+                    line(30) +\
+                    catsubtag_block(imported_dict, pages_id) +\
+                    line(30) +\
+                    f'Description: {description(imported_dict, pages_id)}' + "\n" +\
+                    line(30) +\
+                    f'| UPC | {str.center("Part", part_name_length)}|  Info\n' +\
+                    line(30)
 
     body += product_page 
 body += "Categories: " + string_it(all_cat) + "\n"
