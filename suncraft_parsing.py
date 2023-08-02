@@ -1,5 +1,5 @@
 from json import load
-import traceback
+import traceback, re
 
 def string_it(s):
     string = ""
@@ -16,49 +16,16 @@ def live_url(imported_dict, id, string = True):
     url = "https://suncraftind.com/catalog/" + imported_dict[id]["slug_product"]
     return url
 
-def cat(imported_dict, id, string = True):
+def list_groups_as_string(imported_dict, id, group_type, string = True):
     counter = 0
     listed = []
+    key_for_name = "name_category" if group_type == "Categories" else "name"
     try:
-        for i in imported_dict[id]["Categories"]["data"]:
-            listed.append(imported_dict[id]["Categories"]["data"][counter]["attributes"]["name_category"])
+        for i in imported_dict[id][group_type]["data"]:
+            listed.append(imported_dict[id][group_type]["data"][counter]["attributes"][key_for_name])
             counter += 1
         if string:
-            output = f"Categories: {string_it(listed)}\n"
-        else:
-            output = listed
-
-    except Exception as error:
-        print(error)
-        output = "Error\n"
-    return output
-
-def subcat(imported_dict, id, string = True):
-    counter = 0
-    listed = []
-    try:
-        for i in imported_dict[id]["subcategories"]["data"]:
-            listed.append(imported_dict[id]["subcategories"]["data"][counter]["attributes"]["name"])
-            counter += 1
-        if string:
-            output = f"Subcategories: {string_it(listed)}\n"
-        else:
-            output = listed
-
-    except Exception as error:
-        print(error)
-        output = "Error\n"
-    return output
-
-def tags(imported_dict, id, string = True):
-    counter = 0
-    listed = []
-    try:
-        for i in imported_dict[id]["tags"]["data"]:
-            listed.append(imported_dict[id]["tags"]["data"][counter]["attributes"]["name"])
-            counter += 1
-        if string:
-            output = f"Tags: {string_it(listed)}\n"
+            output = f"{group_type}: {string_it(listed)}\n"
         else:
             output = listed
 
@@ -136,7 +103,7 @@ def import_handeling(dict_file = str, inputloop = False):
     return imported_dict
 
 def catsubtag_block(imported_dict, id):
-    output = f"   {cat(imported_dict, id)}{subcat(imported_dict, id)}         {tags(imported_dict, id)}"
+    output = f'   {list_groups_as_string(imported_dict, id,"Categories")}{list_groups_as_string(imported_dict, id, "subcategories")}         {list_groups_as_string(imported_dict, id,"tags")}'
     return output
 
 def file_saving(filename:str, body:str):
@@ -146,22 +113,10 @@ def file_saving(filename:str, body:str):
     print(f'\nDone: {filename}.txt has been saved\n')
 
 def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
-    listed = []
-    clean_list = []
-    for items in imported_dict[id]["Meta"]:
-        listed.append(f'{items["name"]}')
-    
-    for i in listed:
-        this = str(i)
-        for ii in remove:
-            this = this.replace(ii, replace_with)
-        clean_list.append(this)
-        
-    if string:
-        output = f"{string_it(clean_list)}\n"
-    else:
-        output = clean_list
-    return output
+    listed = [ str(i["name"]) for i in imported_dict[id]["Meta"]]
+    re_pattern = "*".join(list(remove)) + "*"
+    clean_list = [re.sub(re_pattern,replace_with,i) for i in listed]
+    return f"{string_it(clean_list)}\n" if string else clean_list
 
 def meta_data(imported_dict, id, string = True,):
     listed = []
