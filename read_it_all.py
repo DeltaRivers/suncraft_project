@@ -36,11 +36,11 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
 
     #Page
     product_page += line(30) +\
-        f'{name(imported_dict, pages_id)}\n' +\
+        f'Name: {name(imported_dict, pages_id)}\n' +\
         line(30) +\
         catsubtag_block(imported_dict, pages_id) +\
         line(30) +\
-        description(imported_dict, pages_id) + "\n" +\
+        f'Description: {description(imported_dict, pages_id)}' + "\n" +\
         line(30) +\
         f'| UPC | {str.center("Part", part_name_length)}|  Info\n' +\
         line(30)

@@ -41,7 +41,7 @@ def subcat(imported_dict, id, string = True):
             listed.append(imported_dict[id]["subcategories"]["data"][counter]["attributes"]["name"])
             counter += 1
         if string:
-            output = f"Subcategores: {string_it(listed)}\n"
+            output = f"Subcategories: {string_it(listed)}\n"
         else:
             output = listed
 
