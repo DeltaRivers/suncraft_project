@@ -41,21 +41,19 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
             upc_list = upc(imported_dict, pages_id, False)
             part_list = part(imported_dict, pages_id, False)
             parts_dict = dict(zip(part_list, upc_list))
-                #Page
-                # product_page += f'{name(imported_dict, pages_id)}\n'
-                # product_page += f'{imported_dict[pages_id]["slug_product"]}\n'
-                # product_page += f'{sort_rank(imported_dict, pages_id)}\n'
-                # product_page += f'{admin_url(pages_id)}\n'
-                # product_page += f'{live_url(imported_dict, pages_id)}\n'
-                # product_page += f'\n'
 
+                #Page
             product_page += \
                 f'{name(imported_dict, pages_id)}\n' +\
-                f'{catsubtag_block(imported_dict, pages_id)}\n' +\
+                f'{line(30)}' +\
+                f'{catsubtag_block(imported_dict, pages_id)}' +\
+                f'{line(30)}' +\
                 f'{description(imported_dict, pages_id)}\n' +\
-                f'{line(30)}\n' +\
+                f'{line(30)}' +\
                 f'| UPC | {str.center("Part", part_name_length)}|  Info\n' +\
+                f'{line(30)}' +\
                 f''
+            
             for i in parts_dict:
                 try:
                     product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_length + 1)} {meta_dict[i]}\n')
