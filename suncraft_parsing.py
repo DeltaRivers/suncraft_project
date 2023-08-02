@@ -136,7 +136,7 @@ def import_handeling(dict_file = str, inputloop = False):
     return imported_dict
 
 def catsubtag_block(imported_dict, id):
-    output = f"  {cat(imported_dict, id)}{subcat(imported_dict, id)}        {tags(imported_dict, id)}"
+    output = f"   {cat(imported_dict, id)}{subcat(imported_dict, id)}         {tags(imported_dict, id)}"
     return output
 
 def file_saving(filename:str, body:str):
@@ -145,17 +145,7 @@ def file_saving(filename:str, body:str):
     working_file.close()
     print(f'\nDone: {filename}.txt has been saved\n')
 
-def meta_name(imported_dict, id, string = True):
-    listed = []
-    for items in imported_dict[id]["Meta"]:
-        listed.append(f'{items["name"]}')
-    if string:
-        output = f"{string_it(listed)}\n"
-    else:
-        output = listed
-    return output
-
-def meta_name2(imported_dict, id, string = True, remove = '', replace_with = ''):
+def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
     listed = []
     clean_list = []
     for items in imported_dict[id]["Meta"]:
@@ -172,14 +162,6 @@ def meta_name2(imported_dict, id, string = True, remove = '', replace_with = '')
     else:
         output = clean_list
     return output
-
-
-
-
-
-
-
-
 
 def meta_data(imported_dict, id, string = True,):
     listed = []

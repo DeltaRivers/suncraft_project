@@ -1,4 +1,4 @@
-from suncraft_parsing import admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, string_it, file_saving, meta_data, meta_name2, part, upc
+from suncraft_parsing import admin_url, import_handeling, catsubtag_block, tags, subcat, cat, name, description, string_it, file_saving, meta_data, meta_name, part, upc
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
@@ -25,7 +25,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
     all_subcat.update(subcat(imported_dict, pages_id, False))
     all_tags.update(tags(imported_dict, pages_id, False))
 
-    meta_name_list = meta_name2(imported_dict, pages_id, False, "- .")
+    meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
     meta_data_list = meta_data(imported_dict, pages_id, False)
     meta_dict = dict(zip(meta_name_list, meta_data_list))
 
