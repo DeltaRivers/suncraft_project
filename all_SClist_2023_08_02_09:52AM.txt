@@ -12,21 +12,21 @@ Click on the black 'color squares' to see images of each item.
 ------------------------------
 | UPC |    Part  |  Info
 ------------------------------
-|14301|   TS134MB|
-|14300|   TS137MB|
-|14233|   TS164MB|
-|14234|   TS167MB|
-|14307|   SS150MB|
-|14309|    6840MB|
-|14308|    6800MB|
-|14280|  780070MB|
-|14303|   FP143MB|
-|14302|   FP142MB|
-|14306|  TD2512MB|
-|80248| CTD3000MB|
-|80249| CTD3200MB|
-|14305|    090NMB|
-|14304|    S188MB|
+|14301|   TS134MB|  14301 - Tub Spout, Nose Mount, Diverter
+|14300|   TS137MB| 14300 - Tub Spout, Nose Mount, No Diverter
+|14233|   TS164MB| 14233 - Tub Spout, All-4-1, Diverter
+|14234|   TS167MB| 14234 - Tub Spout, All-4-1, No Diverter
+|14307|   SS150MB| 14307 - Tub Spout Trim Plate
+|14309|    6840MB| 14309 - Bathroom Sink Drain, No Overflow, Clicker
+|14308|    6800MB| 14308 - Bathroom Sink Drain, Overflow, Clicker
+|14280|  780070MB| 14280 - Clicker Stopper
+|14303|   FP143MB| 14303 - Tub Faceplate, 1 hole
+|14302|   FP142MB| 14302 - Tub Faceplate, 2 holes
+|14306|  TD2512MB| 14306 - Tub Drain, Lift & Turn
+|80248| CTD3000MB| 80248 - Tub Drain Kit, 1 hole
+|80249| CTD3200MB| 80249 - Tub Drain Kit, 2 hole
+|14305|    090NMB| 14305 - 6" shower Arm & Flange
+|14304|    S188MB| 14304 - Shower head, single function
 
 ------------------------------
 Name: Plastic Popup With Overflow
@@ -95,7 +95,7 @@ Description: All brass Pop-Up Sink Drain with overflow and tailpiece with free r
 | UPC |     Part    |  Info
 ------------------------------
 |10011|        630E2| Chrome
-|10010|       6300E1|
+|10010|        630E1| Chrome plated brass with, Stainless Steel Clad Plunger
 |10030|  630B3PBRPVD| Polished Brass PVD
 |10210|   630B3SNPVD| Satin Nickel
 |14048|     630B3ORB| Oil Rubbed Bronze
@@ -717,7 +717,6 @@ Description: 2-3/4" Chrome plated top / Brass body Square Clicker Plunger fits 7
 |14267|    78007070CP| Chrome
 |14268| 78007070SNPVD| Satin Nickel PVD
 |14269|   78007070ORB| Oil Rubbed Bronze
-|14280|      780070MB|
 
 ------------------------------
 Name: Grid Drain Conversion Insert
@@ -757,7 +756,7 @@ Description: Plunger for various pop up drains
 ------------------------------
 | UPC |     Part    |  Info
 ------------------------------
-|-----|        -----|
+|-----|         ====|  - - - - - - - - Fits - - - - - - - -
 |10059|     630016CP|  
 |10051|       600B28| 600S, 600S2
 |10044|       620004|  620A05, Moen
@@ -781,7 +780,7 @@ Description: Plunger Seal
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|-----|   ====|  - - - - - - - - Fits - - - - - - - -
 |10096| 600008| 600S, 600S2,
 |10074| 620002| 630D1, 630D2, 630D4W, 630DS4W
 
@@ -796,7 +795,7 @@ Description: Waste Seat for Popup Drains.  Converts overflow types.
 ------------------------------
 | UPC |     Part    |  Info
 ------------------------------
-|-----|        -----|
+|-----|         ====|  - - - - - - - - Fits - - - - - - - -
 |10080|       620016| 630D1, 630D2, 630E1
 |10081|    620016PBR|  
 |10041| 620016PBRPVD|  
@@ -816,7 +815,7 @@ Description: Foam Washer
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|-----|   ====|  - - - - - - - - Fits - - - - - - - -
 |10087| 620039| 630D1, 10003, 630D2, 10004, 630D4W, 10006, 630DS4W, 10009,630E2, 10011, 630E8, 10036,
 |10071| 600029|  
 
@@ -831,7 +830,7 @@ Description: Rubber Gasket
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|-----|   ====|  - - - - - - - - Fits - - - - - - - -
 |10242| 600B05|  
 |10099| 600B30| 600S, 600S2
 |10090| 620B02| 630D1, 630D2, 630D4W, 630DS4W, 630E2, 630E1, 630E8
@@ -847,7 +846,7 @@ Description: Metal Washer with retainer Lip
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10089| 620085| 630E2, 630E1, 630E8, 630D1, 630D2, 630D4W, 630DS4W
 |10045| 620051| 620082, 620082PBR, 620082PBRPVD
 |10047| 620A05| 600S, 600S2,
@@ -863,8 +862,8 @@ Description: Mounting Nut
 ------------------------------
 | UPC |   Part |  Info
 ------------------------------
-|-----|   -----|
-|10097|  600B06|
+|====|    ====|  - - - - - - - - Fits - - - - - - - -
+|10097|  600B06| 600S, 600S2
 |10091|  620B04| 630D1, 630D2, 630D4W, 630DS4W, 630E2, 630E1, 630E8,
 |10098| 600B06A|  
 
@@ -879,7 +878,7 @@ Description: Seal Washer
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10095| 630028|  630D1, 630D2, 630D4W, 630DS4W, 630E2, 630E1, 630E8
 
 ------------------------------
@@ -893,7 +892,7 @@ Description: Tail Piece Assembly for Popup drains.
 ------------------------------
 | UPC |   Part |  Info
 ------------------------------
-|-----|   -----|
+|====|    ====|  - - - - - - - - Fits - - - - - - - -
 |10048|  620069| 630D1, 630D2, 630D4W, 630DS4W
 |10182| 630024A| 630E2, 630E1, 630E8
 |10069|  630026| 630E2, 630E1, 630E8
@@ -909,7 +908,7 @@ Description: Pivot Rod Assembly
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10073| 600K03| 600S, 600S2
 |10075| 620010| 630D1, 630D2, 630D4W, 630DS4W
 |10093| 630013| 630E2, 630E1, 630E8
@@ -925,7 +924,7 @@ Description: Pivot Seal
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10076| 620011|  630D1, 630D2, 630D4W, 630DS4W
 |10094| 630027| 630E2, 630E1, 630E8
 
@@ -940,7 +939,7 @@ Description: Pivot Nut
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10072| 600B07| 600S, 600S2, 630D1, 630D2, 630D4W, 630DS4W
 |10040| 620012| Moen
 |10092| 630009| 630E2, 630E1, 630E8
@@ -956,7 +955,7 @@ Description: Pivot nut seal.
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - - - - - - - - -
 |10088| 620071| 630D1, 630D2, 630D4W, 630DS4W
 
 ------------------------------
@@ -970,7 +969,7 @@ Description: Spring Clamp
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10079| 620015| All Popups
 
 ------------------------------
@@ -984,7 +983,7 @@ Description: Drain Rod Strap
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - Fits - - - - - - - -
 |10077| 620013| All Popups
 
 ------------------------------
@@ -998,7 +997,7 @@ Description: Thumb Screw
 ------------------------------
 | UPC |  Part |  Info
 ------------------------------
-|-----|  -----|
+|====|   ====|  - - - - - - - - - - - - - - - -
 |10078| 620014| All Popups
 
 ------------------------------
@@ -1012,12 +1011,12 @@ Description: Lift Rod & Knob Assembly
 ------------------------------
 | UPC |     Part    |  Info
 ------------------------------
-|-----|        -----|
-|10083|       620025|  
-|10085|    620029PBR|  
-|10042| 620029PBRPVD| 630B3PBRPVD
-|10258|     620029SN|
-|10086|      620029W| 630D4W
+|====|         ====|  - - - - - - - - Fits - - - - - - - -
+|10083|       620025|  Chrome
+|10085|    620029PBR|  Polished Brass
+|10042| 620029PBRPVD| Polished Brass PVD
+|10258|     620029SN| Satin Nickel
+|10086|      620029W| White
 
 ------------------------------
 Name: Plastic Economy
@@ -1335,10 +1334,10 @@ Description: Plastic shower head, single function, brass ball joint, 6" diameter
 
 
 ------------------------------
-| UPC |   Part |  Info
+| UPC |  Part |  Info
 ------------------------------
-|11102|   S1070| Chrome
-|11103| S1070-W|
+|11102|  S1070| Chrome
+|11103| S1070W| White
 
 ------------------------------
 Name: 5" Plastic 5 Function
@@ -1496,7 +1495,7 @@ Description: This personal shower kit includes: (PSSB-002) Slide bar with remova
 ------------------------------
 | UPC |  Part|  Info
 ------------------------------
-|11158| PSS11|
+|11158| PSS11| Includes: PSSB002, PSH59-SS, PSC450
 
 ------------------------------
 Name: Arm Mount Shower Kit White
@@ -1636,10 +1635,10 @@ Description: All Brass 6" shower Arm and matching flange
 |11026|      090NBG| Black & Gold
 |11025|       090NG| Gold
 |14305|      090NMB| Matte Black
-|80044|       C090N|
-|80045| C090NPBRPVD|
-|80051|     C090NSN|
-|80177|    C090NORB|
+|80044|       C090N| Chrome Carded
+|80045| C090NPBRPVD| Polished Brass, Carded
+|80051|     C090NSN| Satin Nickel, Carded
+|80177|    C090NORB| Oil Rubbed Bronze, Carded
 
 ------------------------------
 Name: 090N-MB
@@ -2174,7 +2173,7 @@ Description: 59" Shower Head Hose featuring double lock with Chrome plated nut
 |11070|  PSH59VCN| White Vinyl
 |80014| CPSH59BCP| Brass Chrome Plated, Carded
 |80243|  CPSH59SN| Satin Nickel, Carded
-|80017| CPSH59VCN|
+|80017| CPSH59VCN| White, Carded
 
 ------------------------------
 Name: All Shower Hoses
@@ -2781,7 +2780,7 @@ Description: 7" Long zinc tub spout with 1/2" IPS nose mount
 ------------------------------
 | UPC |     Part    |  Info
 ------------------------------
-|10197|        TS127|
+|10197|        TS127| Chrome
 |10199|     TS127PBR| Polished Brass
 |10198|  TS127PBRPVD| Polished Brass PVD
 |10225|      TS127SN| Satin Nickel
@@ -3023,7 +3022,7 @@ Description: Tub drain Lift & Turn Conversion Kit comes with lift and turn tub d
 |80129| CTD3000PBRPVD| Polished Brass PVD
 |80130|     CTD3000SN| Satin Nickel
 |80136|    CTD3000ORB| Oil Rubbed Bronze
-|80248|      TD2512MB|
+|80248|     CTD3000MB| Matte Black
 
 ------------------------------
 Name: C-TD3000-MB
@@ -3034,9 +3033,9 @@ Subcategories: Lift and Turn
 ------------------------------
 Description: NEW! Matte Black tub drain Lift & Turn Conversion Kit comes with lift and turn tub drain, with conversion bushing, and single hole face plate and hardware, packaged in blister clamshell with product card.
 ------------------------------
-| UPC |   Part  |  Info
+| UPC |    Part  |  Info
 ------------------------------
-|80248| TD2512MB|
+|80248| CTD3000MB| Matte Black
 
 ------------------------------
 Name: Conversion Kit With Lift & Turn Drain
@@ -3377,8 +3376,8 @@ Description: 1-4-All Universal Tub Spout Attachment Kit.
 ------------------------------
 |10190|  S1400| Fits 5" nose mount tub spouts.  TS134, TS137 
 |14107|  S1407| Fits 7" nose mount tub spouts.  TS124, TS127 
-|80202| CS1400|
-|80203| CS1407|
+|80202| CS1400| S1400 packed in a clamshell
+|80203| CS1407| S1407 packed in a clamshell
 
 ------------------------------
 Name: Duplex Strainer Assembly
@@ -4680,8 +4679,8 @@ Description: All Brass Drain Dome Cover in different length shanks
 ------------------------------
 | UPC |    Part   |  Info
 ------------------------------
-|14088|    LP66ORB|
-|14095| LP66100ORB|
+|14088|    LP66ORB| 3" Shank
+|14095| LP66100ORB| 4" Shank
 
 ------------------------------
 Name: product
@@ -4696,6 +4695,6 @@ Description: description test
 ------------------------------
 |-upc-| part|
 
-Categories: Bathroom Sink Accessories, Tools, Shower Heads, Glass Vessel Accessories, Shower Accessories, Tub Spout, Tub Drains, Tub Accessories, Bathroom Sink Drains, Glass Vessels, Special, Toilet Accessories, Kitchen & Accessories, Various Items
-Subcategories: Diverter, Escutcheon, Drinking faucet, Hose, Drop In, Pipe Cutter, Shower Arm, Facet Washer Bibb Chest, Facet Washer, Overflow Faceplate, Washer, Aerator, Vessel Mount, Single Function, Facet Pull Out Sprayer, Shower Supply Elbow, Lift and Turn, Kit, Mount, Flange, Rinse Spray, Rain, Clicker Style, Vacuum breaker, Flow Control, Strainer Assembly, Wrench, Hand Held, Adjustable Spray, One Piece, Grid Drain, Filler, Tailpiece, Parts, Faucet, Pop Up, Various Items, Push & Lock, Lever, Hose Connection
-Tags: Faucet Seat, Beveled, Dome, Deep Cup, Button, Carded, Wall Mount, 4.5"D, Single Function, Stainless Steel, 1.2 GPM, Round, 1-4-All Universal Fit, 59-80" hose, 8", Flush Mount, 1.8 GPM, Massage, Zinc, 1.75 GPM, Duplex, 1 1/2" (Coarse Thread), pliers, U Shape, Water Saving, L Shape, Rear Diverter, Step, Escutchon, Jaws, Hose, Sillcock Key, Hook, 5 Function, nose mount, 7"D, 1 hole, Kit, Three Piece, 1.75"D, Spud Chuck, Economy, Industrial, Telescoping Adjustable Feature, Adjustable Spray, 10 Sizes, De-burring Tool, Strainer Wrench, 2.5 GPM, Swivel Connector, Pop Up, ®Mixet Style 4, With Overflow, Arm Mount, Flat, PVC, Free Rotateing Connector Nut, Jr Duo, Spray Head, Wide, 1/2" IPS, Plastic, Adjustable, Front Diverter, Plug Wrench, S Shape, 1.5 GPM, Two Piece, Nipple Extractor, Tapered, Hose Guide, Clicker Stopper, Strap Wrench, 6"D, Basin Wrench, Parts, Rear Mount, Copper Pipe, Square, Socket Wrench, Cartridge Puller, 1 1/4" (Fine Thread), Stopper, Slip Fit 5/8" OD, 2.0 GPM, Basket, Straight, All Brass, 2 Holes, 2.2 GPM, Pop Up Assembly, Flow Control, Convert, Jet, Grid Drain, Spin and Seal, No Diverter, Clog Resistant, 3/4" IPS, Half & Half, No Overflow, Bracket, Hose Connection, Nut Wrench, Jewel Series
+Categories: Glass Vessels, Bathroom Sink Accessories, Toilet Accessories, Special, Tools, Kitchen & Accessories, Tub Spout, Tub Accessories, Bathroom Sink Drains, Tub Drains, Glass Vessel Accessories, Various Items, Shower Heads, Shower Accessories
+Subcategories: Flow Control, Pop Up, Washer, One Piece, Facet Pull Out Sprayer, Kit, Parts, Lever, Mount, Push & Lock, Wrench, Vacuum breaker, Filler, Overflow Faceplate, Escutcheon, Rain, Tailpiece, Drinking faucet, Rinse Spray, Pipe Cutter, Strainer Assembly, Drop In, Single Function, Faucet, Clicker Style, Facet Washer Bibb Chest, Vessel Mount, Shower Supply Elbow, Aerator, Lift and Turn, Facet Washer, Adjustable Spray, Diverter, Grid Drain, Flange, Hand Held, Hose, Various Items, Shower Arm, Hose Connection
+Tags: Flow Control, Pop Up, With Overflow, 6"D, Straight, Basin Wrench, Free Rotateing Connector Nut, Economy, No Overflow, Spin and Seal, Slip Fit 5/8" OD, PVC, Sillcock Key, 1-4-All Universal Fit, ®Mixet Style 4, Stainless Steel, Telescoping Adjustable Feature, Carded, 1.75"D, Water Saving, Three Piece, Hose, Button, U Shape, Hose Connection, Front Diverter, 2.2 GPM, Plastic, Jewel Series, Rear Mount, 10 Sizes, 1/2" IPS, 1.2 GPM, Deep Cup, Spud Chuck, Swivel Connector, Zinc, Adjustable, 4.5"D, Pop Up Assembly, Spray Head, Arm Mount, 2.5 GPM, 2 Holes, Faucet Seat, 2.0 GPM, 7"D, Grid Drain, Half & Half, 1.5 GPM, Tapered, Jet, Jr Duo, Parts, Kit, Copper Pipe, Bracket, Rear Diverter, Hook, All Brass, Wide, Cartridge Puller, Beveled, Clog Resistant, No Diverter, Plug Wrench, Escutchon, Single Function, 1.8 GPM, 8", 5 Function, Stopper, 1 1/4" (Fine Thread), Step, Nut Wrench, Flush Mount, Nipple Extractor, Adjustable Spray, Socket Wrench, S Shape, Massage, Dome, Strap Wrench, Round, Industrial, Jaws, 1 hole, Hose Guide, De-burring Tool, Clicker Stopper, pliers, Wall Mount, Duplex, Convert, 59-80" hose, L Shape, Flat, 1.75 GPM, 3/4" IPS, Square, Two Piece, Strainer Wrench, nose mount, 1 1/2" (Coarse Thread), Basket
