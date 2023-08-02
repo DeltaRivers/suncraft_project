@@ -1,12 +1,6 @@
 from json import load
 import traceback, re
 
-def string_it(s):
-    string = ""
-    for i in s:
-        string += i + ", "
-    string = string[:-2]
-    return string
 
 def admin_url(id):
     url = "https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/" + id
@@ -25,7 +19,7 @@ def list_groups_as_string(imported_dict, id, group_type, string = True):
             listed.append(imported_dict[id][group_type]["data"][counter]["attributes"][key_for_name])
             counter += 1
         if string:
-            output = f"{group_type}: {string_it(listed)}\n"
+            output = f'{group_type}: {" ".join(listed)}\n'
         else:
             output = listed
 
@@ -45,7 +39,7 @@ def part(imported_dict, id, string = True):
     for items in imported_dict[id]["Colors"]:
         listed.append(f'{items["part_number"]}')
     if string:
-        output = f"{string_it(listed)}\n"
+        output = " ".join(listed) + "\n"
     else:
         output = listed
     return output
@@ -55,7 +49,7 @@ def upc(imported_dict, id, string = True):
     for items in imported_dict[id]["Colors"]:
         listed.append(f'{items["upc_color"]}')
     if string:
-        output = f"{string_it(listed)}\n"
+        output = f" ".join(listed) + "\n"
     else:
         output = listed
     return output
@@ -116,17 +110,11 @@ def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
     listed = [ str(i["name"]) for i in imported_dict[id]["Meta"]]
     re_pattern = "*".join(list(remove)) + "*"
     clean_list = [re.sub(re_pattern,replace_with,i) for i in listed]
-    return f"{string_it(clean_list)}\n" if string else clean_list
+    return " ".join(clean_list) + "\n" if string else clean_list
 
 def meta_data(imported_dict, id, string = True,):
-    listed = []
-    for items in imported_dict[id]["Meta"]:
-        listed.append(f'{items["value"]}')
-    if string:
-        output = f"{string_it(listed)}\n"
-    else:
-        output = listed
-    return output
+    listed = [i["value"] for i in imported_dict[id]["Meta"]]      
+    return " ".join(listed) + "\n" if string else listed
 
 def name(imported_dict, id):
     output = imported_dict[id]["name_product"]

@@ -21,5 +21,5 @@ def test_everything():
 "|10000| 600S2| Plastic with Stainless Steel Clad Top & Plunger\n\n"+\
 "Categories: Bathroom Sink Drains\n"+\
 "Subcategories: Pop Up\n"+\
-"Tags: Plastic, No Overflow\n" == t
+"Tags: No Overflow, Plastic\n" == t
     

@@ -1,4 +1,4 @@
-from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, list_groups_as_string, name, description, string_it, file_saving, meta_data, meta_name, part, upc
+from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving, meta_data, meta_name, part, upc
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 
@@ -47,17 +47,13 @@ def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), a
         product_page += f'\n'
         body += product_page 
 
-    body += "Categories: " + string_it(all_cat) + "\n"
-    body += "Subcategories: " + string_it(all_subcat) + "\n"
-    body += "Tags: " + string_it(all_tags) + "\n"
+    body += "Categories: " + ", ".join(all_cat) + "\n"
+    body += "Subcategories: " + ", ".join(all_subcat) + "\n"
+    body += "Tags: " + ", ".join(all_tags) + "\n"
 
     return body
     # Creates and/or opens the file to work with.
 
 
 # # Variables
-# file_name_prefix = "all"
-# imported_dict = import_handeling(suncraft_database_file, False)
-# body = read_it_all(imported_dict)
-# file_saving(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
 
