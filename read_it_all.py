@@ -49,6 +49,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
             product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_length + 1)} {meta_dict[i]}\n')
         except KeyError:
             product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_length + 1)}\n')
+
     product_page += f'\n'
     body += product_page 
 
