@@ -1,0 +1,89 @@
+{
+    "1": {
+        "Categories": {
+            "data": [
+                {
+                    "attributes": {
+                        "createdAt": "2022-12-15T23:42:07.178Z",
+                        "name_category": "Bathroom Sink Drains",
+                        "publishedAt": "2023-01-11T20:04:18.474Z",
+                        "slug_category": "bathroom-sink-drains",
+                        "updatedAt": "2023-05-05T16:45:39.893Z"
+                    },
+                    "id": 1
+                }
+            ]
+        },
+        "Colors": [
+            {
+                "color_color": "#afb5b8",
+                "id": 17,
+                "link": "https://homefixitparts.com/plumbing-1/plumbing-bathroom-drains-assemblies-p13-01-046.html",
+                "name_color": "600-S2 - 10000 (SS Clad Top & Plunger)",
+                "part_number": "600S2",
+                "upc_color": "10000"
+            }
+        ],
+        "Meta": [
+            {
+                "id": 1606,
+                "name": " - - - - - ",
+                "value": " - - - - - - - - - - - - - - - -"
+            },
+            {
+                "id": 1607,
+                "name": "600S2",
+                "value": "Plastic with Stainless Steel Clad Top & Plunger"
+            }
+        ],
+        "createdAt": "2022-12-15T23:46:11.616Z",
+        "description": "Plastic Sink Drain single piece Pop-Up Drain without Overflow Easy Assembly with  with Stainless Steel clad waste seat and plunger, comes complete with lift rod and linkage.",
+        "name_product": "SS Clad Top Plastic Popup No Overflow",
+        "pdf": {
+            "data": null
+        },
+        "publishedAt": "2023-02-08T16:46:09.317Z",
+        "rank": "11200",
+        "search": "ss clad top plastic popup no overflow 600s2 plastic sink drain single piece pop-up drain without overflow easy assembly with  with stainless steel clad waste seat and plunger, comes complete with lift rod and linkage. 600-s2 - 10000 (ss clad top & plunger) #afb5b8 10000 600s2  - - - - -   - - - - - - - - - - - - - - - - 600s2 plastic with stainless steel clad top & plunger bathroom sink drains pop up no overflow plastic ",
+        "slug_product": "600s2",
+        "subcategories": {
+            "data": [
+                {
+                    "attributes": {
+                        "createdAt": "2023-02-13T00:45:05.504Z",
+                        "name": "Pop Up",
+                        "publishedAt": "2023-02-13T00:45:51.419Z",
+                        "slug": "pop-up",
+                        "updatedAt": "2023-02-13T00:45:52.044Z"
+                    },
+                    "id": 1
+                }
+            ]
+        },
+        "tags": {
+            "data": [
+                {
+                    "attributes": {
+                        "createdAt": "2023-02-03T20:05:59.894Z",
+                        "name": "No Overflow",
+                        "publishedAt": "2023-02-03T20:52:10.864Z",
+                        "slug": "no-overflow",
+                        "updatedAt": "2023-02-03T20:52:10.867Z"
+                    },
+                    "id": 2
+                },
+                {
+                    "attributes": {
+                        "createdAt": "2023-03-01T00:19:22.958Z",
+                        "name": "Plastic",
+                        "publishedAt": "2023-03-01T00:19:25.211Z",
+                        "slug": "plastic",
+                        "updatedAt": "2023-03-01T00:19:25.216Z"
+                    },
+                    "id": 69
+                }
+            ]
+        },
+        "updatedAt": "2023-07-24T23:23:25.073Z"
+    }
+}
