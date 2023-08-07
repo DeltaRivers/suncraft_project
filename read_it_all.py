@@ -12,9 +12,9 @@ def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), a
             if len(i) > part_name_length:
                 part_name_length = len(i)
 
-        all_cat.update(list_groups_as_string(imported_dict, pages_id,"Categories", False))
-        all_subcat.update(list_groups_as_string(imported_dict, pages_id,"subcategories", False))
-        all_tags.update(list_groups_as_string(imported_dict, pages_id,"tags", False))
+        all_cat.update(list_groups_as_string(imported_dict, pages_id,"cat", False))
+        all_subcat.update(list_groups_as_string(imported_dict, pages_id,"sub", False))
+        all_tags.update(list_groups_as_string(imported_dict, pages_id,"tag", False))
 
         meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
         meta_data_list = meta_data(imported_dict, pages_id, False)
@@ -28,9 +28,9 @@ def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), a
         #Page
         product_page += \
             f'{name(imported_dict, pages_id)}\t' +\
-            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "Categories", False))}\t' +\
-            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "subcategories", False))}\t' +\
-            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "tags", False))}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "cat", False))}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "sub", False))}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "tag", False))}\t' +\
             f'{description(imported_dict, pages_id)}\t' +\
             f''
         

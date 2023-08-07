@@ -20,9 +20,9 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
         any_of_these = i
 
         if any_of_these in this_group:
-            all_cat.update(list_groups_as_string(imported_dict, pages_id,"Categories",False))
-            all_subcat.update(list_groups_as_string(imported_dict, pages_id,"subcategories", False))
-            all_tags.update(list_groups_as_string(imported_dict, pages_id,"tags", False))
+            all_cat.update(list_groups_as_string(imported_dict, pages_id,"cat",False))
+            all_subcat.update(list_groups_as_string(imported_dict, pages_id,"sub", False))
+            all_tags.update(list_groups_as_string(imported_dict, pages_id,"tag", False))
 
             meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
             meta_data_list = meta_data(imported_dict, pages_id, False)

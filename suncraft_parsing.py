@@ -10,7 +10,14 @@ def live_url(imported_dict, id, string = True):
     url = "https://suncraftind.com/catalog/" + imported_dict[id]["slug_product"]
     return url
 
-def list_groups_as_string(imported_dict, id, group_type, string = True):
+def list_groups_as_string(imported_dict, id, kind, string = True):
+    if kind in ["cat", "c", "categories", "Categories", "category", "Category"]:
+        group_type = "Categories"
+    elif kind in ["sub", "s", "subcategories", "Subcategories", "Subcategory", "subcategory"]:
+        group_type = "subcategories"
+    elif kind in ["tag", "t", "tags", "Tags", "Tag"]:
+        group_type = "tags"
+
     counter = 0
     listed = []
     key_for_name = "name_category" if group_type == "Categories" else "name"
@@ -116,7 +123,7 @@ def file_saving_tsv(filename:str, dict_list:list):
     print(f'\nDone: {filename} has been saved\n')
 
 def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
-    listed = [ str(i["name"]) for i in imported_dict[id]["Meta"]]
+    listed = [str(i["name"]) for i in imported_dict[id]["Meta"]]
     re_pattern = "*".join(list(remove)) + "*"
     clean_list = [re.sub(re_pattern,replace_with,i) for i in listed]
     return " ".join(clean_list) + "\n" if string else clean_list

@@ -18,9 +18,9 @@ def read_it_csv(imported_dict):
         for i in parts_dict:
             try:
                 product_page_list.append({"Page Name":name(imported_dict, pages_id),\
-                        "Categories": ", ".join(list_groups_as_string(imported_dict, pages_id, "Categories", False)),\
-                        "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "subcategories", False)),\
-                        "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tags", False)),\
+                        "Categories": ", ".join(list_groups_as_string(imported_dict, pages_id, "cat", False)),\
+                        "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "sub", False)),\
+                        "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tag", False)),\
                         "Discription":description(imported_dict, pages_id),\
                         "UPC":parts_dict[i],\
                         "Part #":i,\
@@ -28,9 +28,9 @@ def read_it_csv(imported_dict):
                         })
             except KeyError:
                 product_page_list.append({"Page Name":name(imported_dict, pages_id),\
-                        "Categories": ", ".join(list_groups_as_string(imported_dict, pages_id, "Categories", False)),\
-                        "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "subcategories", False)),\
-                        "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tags", False)),\
+                        "Categories": ", ".join(list_groups_as_string(imported_dict, pages_id, "cat", False)),\
+                        "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "sub", False)),\
+                        "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tag", False)),\
                         "Discription":description(imported_dict, pages_id),\
                         "UPC":parts_dict[i],\
                         "Part #":i,\
