@@ -1,6 +1,4 @@
-from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving, meta_data, meta_name, part, upc
-from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
-import csv
+from suncraft_parsing import list_groups_as_string, name, description, meta_data, meta_name, part, upc
 
 
 def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), all_tags = set()):

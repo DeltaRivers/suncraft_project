@@ -1,4 +1,4 @@
-from suncraft_parsing import admin_url, upc, part, line, meta_name, meta_data, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving
+from suncraft_parsing import admin_url, upc, part, line, meta_name, meta_data, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving_txt
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
@@ -59,7 +59,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
 
 
 # Creates and/or opens the file to work with.
-file_saving(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
+file_saving_txt(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
 
 
 

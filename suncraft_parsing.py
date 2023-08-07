@@ -1,5 +1,5 @@
 from json import load
-import traceback, re
+import traceback, re, csv
 
 
 def admin_url(id):
@@ -100,11 +100,20 @@ def catsubtag_block(imported_dict, id):
     output = f'   {list_groups_as_string(imported_dict, id,"Categories")}{list_groups_as_string(imported_dict, id, "subcategories")}         {list_groups_as_string(imported_dict, id,"tags")}'
     return output
 
-def file_saving(filename:str, body:str):
+def file_saving_txt(filename:str, body:str):
     working_file = open(f'{filename}.txt', "w")
     working_file.write(body)
     working_file.close()
     print(f'\nDone: {filename}.txt has been saved\n')
+
+def file_saving_tsv(filename:str, dict_list:list):
+    with open(f'{filename}.tsv', "w", newline="") as tsv_file:
+        tsv_writer = csv.writer(tsv_file, delimiter="\t")
+        header = dict_list[0].keys()
+        tsv_writer.writerow(header)
+        for row in dict_list:
+            tsv_writer.writerow(row.values())
+    print(f'\nDone: {filename} has been saved\n')
 
 def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
     listed = [ str(i["name"]) for i in imported_dict[id]["Meta"]]
