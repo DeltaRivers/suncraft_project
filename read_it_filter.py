@@ -1,4 +1,4 @@
-from suncraft_parsing import upc, part, line, meta_name, meta_data, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving
+from suncraft_parsing import admin_url, upc, part, line, meta_name, meta_data, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
 
 # Variables
@@ -42,6 +42,7 @@ for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[p
                 f'{description(imported_dict, pages_id)}\n' +\
                 f'{line(30)}' +\
                 f'| UPC | {str.center("Part", part_name_max_length)}|  Info\n' +\
+                f'{admin_url(pages_id)}\n' +\
                 f'{line(30)}' +\
                 f''
             

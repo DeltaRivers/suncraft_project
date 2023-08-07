@@ -1,12 +1,13 @@
 from suncraft_parsing import line, admin_url, import_handeling, catsubtag_block, list_groups_as_string, name, description, file_saving, meta_data, meta_name, part, upc
 from suncraft_varriables import suncraft_database_file, looking_for, type_of_group
-
+import csv
 
 
 def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), all_tags = set()):
 
     # This part is the body of the document and how it's formatted
     for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
+        part_name_max_length = max([len(i) for i in part(imported_dict, pages_id, False)])
         product_page = "" # This holds the information for this loop don't remove it
         part_name_length = 0
         for i in part(imported_dict, pages_id, False):
@@ -28,28 +29,46 @@ def read_it_all(imported_dict, body = "", all_cat = set(), all_subcat = set(), a
 
         #Page
         product_page += \
-            line(30) +\
-            f'Name: {name(imported_dict, pages_id)}\n' +\
-            line(30) +\
-            catsubtag_block(imported_dict, pages_id) +\
-            line(30) +\
-            f'Description: {description(imported_dict, pages_id)}' + "\n" +\
-            line(30) +\
-            f'| UPC | {str.center("Part", part_name_length)}|  Info\n' +\
-            line(30)
-
+            f'{name(imported_dict, pages_id)}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "Categories", False))}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "subcategories", False))}\t' +\
+            f'{", ".join(list_groups_as_string(imported_dict, pages_id, "tags", False))}\t' +\
+            f'{description(imported_dict, pages_id)}\t' +\
+            f''
+        
         for i in parts_dict:
             try:
-                product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_length + 1)} {meta_dict[i]}\n')
+                product_page += (f'{parts_dict[i]}\t{i}\t{meta_dict[i]}\t')
             except KeyError:
-                product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_length + 1)}\n')
+                product_page += (f'{parts_dict[i]}\t{i}\t')
 
-        product_page += f'\n'
+
+
+
+
+
+        #     f'{name(imported_dict, pages_id)}\n' +\
+        #     f'{line(30)}' +\
+        #     f'{catsubtag_block(imported_dict, pages_id)}' +\
+        #     f'{line(30)}' +\
+        #     f'{description(imported_dict, pages_id)}\n' +\
+        #     f'{line(30)}' +\
+        #     f'| UPC | {str.center("Part", part_name_max_length)}|  Info\n' +\
+        #     f'{admin_url(pages_id)}\n' +\
+        #     f'{line(30)}' +\
+        #     f''
+        
+        # for i in parts_dict:
+        #     try:
+        #         product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)} {meta_dict[i]}\n')
+        #     except KeyError:
+        #         product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)}\n')
+                
         body += product_page 
 
-    body += "Categories: " + ", ".join(all_cat) + "\n"
-    body += "Subcategories: " + ", ".join(all_subcat) + "\n"
-    body += "Tags: " + ", ".join(all_tags) + "\n"
+    # body += "Categories: " + ", ".join(all_cat) + "\n"
+    # body += "Subcategories: " + ", ".join(all_subcat) + "\n"
+    # body += "Tags: " + ", ".join(all_tags) + "\n"
 
     return body
     # Creates and/or opens the file to work with.
