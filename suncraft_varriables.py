@@ -1,4 +1,4 @@
-suncraft_database_file = "SClist_2023_08_07_08:39AM.json"
+suncraft_database_file = "SClist_2023_08_08_02:42PM.json"
 
 looking_for = ["Tub Spout"] # Spelling and case sensitive at least at the moment, must be a list
 
