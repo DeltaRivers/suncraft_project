@@ -1,7 +1,7 @@
 from suncraft_parsing import list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url
 
 
-def read_it_all(imported_dict, ):
+def read_it_all(imported_dict):
     body = ""
     all_cat = set()
     all_subcat = set()
