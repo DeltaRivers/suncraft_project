@@ -5,7 +5,7 @@ suncraft_database_file = "SClist_2023_08_08_02:42PM.json"
 
 looking_for = all_list # Spelling and case sensitive at least at the moment, must be a list
 
-type_of_group = "Categories" # Categories, subcategories, tags
+type_of_group = "Categories" # Abrevations accepted "cat, sub, tag"
 
 
 

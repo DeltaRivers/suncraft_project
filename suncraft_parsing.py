@@ -13,7 +13,7 @@ def live_url(imported_dict, id, string = True):
 def list_groups_as_string(imported_dict, id, kind, string = True):
     if kind in ["cat", "c", "categories", "Categories", "category", "Category"]:
         group_type = "Categories"
-    elif kind in ["sub", "s", "subcategories", "Subcategories", "Subcategory", "subcategory"]:
+    elif kind in ["sub", "subcat", "sc", "s", "subcategories", "Subcategories", "Subcategory", "subcategory"]:
         group_type = "subcategories"
     elif kind in ["tag", "t", "tags", "Tags", "Tag"]:
         group_type = "tags"
@@ -26,12 +26,12 @@ def list_groups_as_string(imported_dict, id, kind, string = True):
             listed.append(imported_dict[id][group_type]["data"][counter]["attributes"][key_for_name])
             counter += 1
         if string:
-            output = f'{group_type}: {" ".join(listed)}\n'
+            output = f'{str.title(group_type)}: {" ".join(listed)}\n'
         else:
             output = listed
 
     except Exception as error:
-        print(error)
+        print(f'list_groups_as_string\n{error}')
         output = "Error\n"
     return output
 

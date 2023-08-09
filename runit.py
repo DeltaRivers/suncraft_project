@@ -5,6 +5,7 @@ from read_it_pictures import read_it_pictures
 from suncraft_parsing import import_handeling, file_saving_tsv, file_saving_txt
 from suncraft_varriables import suncraft_database_file 
 
+
 def run_file_all():
     file_name_prefix = "all"
     imported_dict = import_handeling(suncraft_database_file, False)
@@ -23,7 +24,13 @@ def run_file_filter():
     body = read_it_filter(imported_dict)
     file_saving_txt(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
     return()
+def run_file_pictures():
+    file_name_prefix = "picture_list"
+    imported_dict = import_handeling(suncraft_database_file, False)
+    body = read_it_pictures(imported_dict)
+    file_saving_txt(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
+    return()
 
 
 
-run_file_filter()
+run_file_pictures()
