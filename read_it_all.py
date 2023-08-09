@@ -51,13 +51,14 @@ def read_it_all(imported_dict):
             except KeyError:
                 product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)}\n')
                 
-        body += product_page 
+        # body += product_page 
         
 # Lists of all the cat-sub-tags for when this is used in a filtered version.
     # body += "Categories: " + ", ".join(all_cat) + "\n"
     # body += "Subcategories: " + ", ".join(all_subcat) + "\n"
     # body += "Tags: " + ", ".join(all_tags) + "\n"
-
+    all_list = list(all_cat) + list(all_subcat) + list(all_tags)
+    body += str(all_list)
     return body
 
 

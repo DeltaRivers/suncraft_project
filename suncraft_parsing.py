@@ -156,4 +156,3 @@ def get_pic_files_dict(\
     for i in dir_list:
         files_dict[i.split("/")[-1].split("_")[0]] = i
     return(files_dict)
-
