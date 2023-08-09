@@ -1,3 +1,5 @@
+from suncraft_parsing import list_groups_as_string
+
 suncraft_database_file = "SClist_2023_08_08_02:42PM.json"
 
 looking_for = ["Tub Spout"] # Spelling and case sensitive at least at the moment, must be a list
@@ -10,7 +12,6 @@ type_of_group = "Categories" # Categories, subcategories, tags
 """
 Catagories:
 -----------
-Glass Vessels
 Tools
 Shower Accessories
 Tub Spout
