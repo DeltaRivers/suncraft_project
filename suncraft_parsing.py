@@ -35,7 +35,7 @@ def list_groups_as_string(imported_dict, id, kind, string = True):
         output = "Error\n"
     return output
 
-def items_block(imported_dict, id:str):
+def items_block(imported_dict, id):
     output = ""
     for items in imported_dict[id]["Colors"]:
         output += f' {items["upc_color"]} | {items["part_number"]}\n'
@@ -46,7 +46,17 @@ def part(imported_dict, id, string = True):
     for items in imported_dict[id]["Colors"]:
         listed.append(f'{items["part_number"]}')
     if string:
-        output = " ".join(listed) + "\n"
+        output = " ".join(listed) #+ "\n"
+    else:
+        output = listed
+    return output
+
+def color_hex(imported_dict, id, string = True):
+    listed = []
+    for items in imported_dict[id]["Colors"]:
+        listed.append(f'{items["color_color"][1:]}')
+    if string:
+        output = " ".join(listed) #+ "\n"
     else:
         output = listed
     return output
@@ -56,7 +66,7 @@ def upc(imported_dict, id, string = True):
     for items in imported_dict[id]["Colors"]:
         listed.append(f'{items["upc_color"]}')
     if string:
-        output = f" ".join(listed) + "\n"
+        output = f" ".join(listed) #+ "\n"
     else:
         output = listed
     return output
