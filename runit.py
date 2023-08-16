@@ -33,4 +33,4 @@ def run_file_pictures():
 
 
 
-run_file_pictures()
+run_file_all()
