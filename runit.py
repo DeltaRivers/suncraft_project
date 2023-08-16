@@ -1,4 +1,4 @@
-from read_it_csv import read_it_csv
+from read_it_csv_for_db_pages import read_it_csv
 from read_it_all import read_it_all
 from read_it_filter import read_it_filter
 from read_it_pictures import read_it_pictures

@@ -1,4 +1,4 @@
-from suncraft_parsing import list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url
+from suncraft_parsing import color_hex, list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url
 
 
 def read_it_all(imported_dict):
@@ -6,6 +6,30 @@ def read_it_all(imported_dict):
     all_cat = set()
     all_subcat = set()
     all_tags = set()
+    hex_to_color_dict = {
+        "":"",
+        "afb5b8":"Chrome", 
+        "b3a046":"Brass", 
+        "929084":"Nickel", 
+        "3e281e":"Oil Rubbed Bronze", 
+        "cfab55":"Gold",
+        "242424":"Black", 
+        "eaeaea":"White", 
+        "666666":"Mid Gray",
+        "ff0000":"Red", 
+        "ff6600":"Orange", 
+        "ffdd00":"Yellow", 
+        "00aa00":"Green", 
+        "009999":"Turquoise",
+        "002eff":"Blue",
+        "992200":"Brown",
+        "e0ddcb":"Almond",
+        "d0ffed":"Clear Glass", 
+        "11aa66":"French Green Glass",
+        }
+
+    number_of_parts_list = list()
+    counts = dict()
 
     # This for loop sorts the product pages in "rank" order
     for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
@@ -13,53 +37,61 @@ def read_it_all(imported_dict):
 
         #Just for formatting later
         part_name_max_length = max([len(i) for i in part(imported_dict, pages_id, False)])
-        part_name_length = 0
-        for i in part(imported_dict, pages_id, False):
-            if len(i) > part_name_length:
-                part_name_length = len(i)
 
         # Updating the "all_lists"
         all_cat.update(list_groups_as_string(imported_dict, pages_id,"cat", False))
         all_subcat.update(list_groups_as_string(imported_dict, pages_id,"sub", False))
         all_tags.update(list_groups_as_string(imported_dict, pages_id,"tag", False))
 
-        # Making and Zipping the parts and meta dict for the combined parts block - may make this a function later
-        meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
-        meta_data_list = meta_data(imported_dict, pages_id, False)
-        meta_dict = dict(zip(meta_name_list, meta_data_list))
-        upc_list = upc(imported_dict, pages_id, False)
-        part_list = part(imported_dict, pages_id, False)
-        parts_dict = dict(zip(part_list, upc_list))
-
-
+        # Making dicts of these things - may make this a function later
+        meta_dict = dict(zip(meta_name(imported_dict, pages_id, False, "- "), meta_data(imported_dict, pages_id, False)))
+        color_dict = dict(zip(upc(imported_dict, pages_id, False), color_hex(imported_dict, pages_id, False)))
+        parts_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
+        number_of_parts_list.append(len(parts_dict))
         #The actual page formatting
-        product_page += \
-            f'\n\n{name(imported_dict, pages_id)}' +\
-            f'   -> {admin_url(pages_id)}\n' +\
-            f'{line(30)}' +\
-            f'{catsubtag_block(imported_dict, pages_id)}' +\
-            f'{line(30)}' +\
-            f'{description(imported_dict, pages_id)}\n' +\
-            f'{line(30)}' +\
-            f'| UPC | {str.center("Part", part_name_max_length)}|  Info\n' +\
-            f'{line(30)}' +\
-            f''
-        
+        #product_page += \
+            # f'\n\n{name(imported_dict, pages_id)}' + f'   -> {admin_url(pages_id)}\n' 
+        no = ""
         for i in parts_dict:
             try:
-                product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)} {meta_dict[i]}\n')
+                product_page += (f'|{str.rjust(parts_dict[i], 5)}| {str.rjust(i + "|", 18 + 1)} {hex_to_color_dict[str.lower(color_dict[parts_dict[i]])]}\n')
             except KeyError:
-                product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)}\n')
-                
-        # body += product_page 
-        
-# Lists of all the cat-sub-tags for when this is used in a filtered version.
+                product_page += (f'{color_dict[parts_dict[i]]} | {parts_dict[i]} -> {admin_url(pages_id)}\n')
+                print(name(imported_dict, pages_id))
+        body += product_page 
+    # Lists of all the cat-sub-tags for when this is used in a filtered version.
     # body += "Categories: " + ", ".join(all_cat) + "\n"
     # body += "Subcategories: " + ", ".join(all_subcat) + "\n"
     # body += "Tags: " + ", ".join(all_tags) + "\n"
     all_list = list(all_cat) + list(all_subcat) + list(all_tags)
     body += str(all_list)
+    
+    for i in number_of_parts_list:
+        counts[i] = counts.get(i, 0) + 1
+
+    for i in counts:
+        print(f'{counts[i]},{i}')
+
     return body
 
 
 
+
+
+
+#I'ma just keep this down here out of the way for a bit
+        # product_page += \
+        #     f'\n\n{name(imported_dict, pages_id)}' + f'   -> {admin_url(pages_id)}\n' +\
+        #     f'{line(30)}' +\
+        #     f'{catsubtag_block(imported_dict, pages_id)}' +\
+        #     f'{line(30)}' +\
+        #     f'{description(imported_dict, pages_id)}\n' +\
+        #     f'{line(30)}' +\
+        #     f'| UPC | {str.center("Part", part_name_max_length)}|  Info\n' +\
+        #     f'{line(30)}' +\
+        #     f''
+        # for i in parts_dict:
+        #     try:
+        #         product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)} {meta_dict[i]}\n')
+        #     except KeyError:
+        #         product_page += (f'|{parts_dict[i]}| {str.rjust(i + "|", part_name_max_length + 1)}\n')
