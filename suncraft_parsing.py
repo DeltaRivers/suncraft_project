@@ -1,6 +1,27 @@
 from json import load
 import traceback, re, csv, glob
 
+hex_to_color_name_dict = {
+    "":"",
+    "afb5b8":"Chrome", 
+    "b3a046":"Brass", 
+    "929084":"Nickel", 
+    "3e281e":"Oil Rubbed Bronze", 
+    "cfab55":"Gold",
+    "242424":"Black", 
+    "eaeaea":"White", 
+    "666666":"Mid Gray",
+    "ff0000":"Red", 
+    "ff6600":"Orange", 
+    "ffdd00":"Yellow", 
+    "00aa00":"Green", 
+    "009999":"Turquoise",
+    "002eff":"Blue",
+    "992200":"Brown",
+    "e0ddcb":"Almond",
+    "d0ffed":"Clear Glass", 
+    "11aa66":"French Green Glass",
+    }
 
 def admin_url(id):
     url = "https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/" + id
@@ -166,3 +187,4 @@ def get_pic_files_dict(\
     for i in dir_list:
         files_dict[i.split("/")[-1].split("_")[0]] = i
     return(files_dict)
+

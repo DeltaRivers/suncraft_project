@@ -1,4 +1,4 @@
-from read_it_csv_for_db_pages import read_it_csv
+from read_it_csv_for_db_pages import read_it_csv_for_db_pages
 from read_it_all import read_it_all
 from read_it_filter import read_it_filter
 from read_it_pictures import read_it_pictures
@@ -13,9 +13,9 @@ def run_file_all():
     file_saving_txt(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
     return()
 def run_file_csv():
-    file_name_prefix = "csv"
+    file_name_prefix = "csv_for_catalog"
     imported_dict = import_handeling(suncraft_database_file, False)
-    body = read_it_csv(imported_dict)
+    body = read_it_csv_for_db_pages(imported_dict)
     file_saving_tsv(f'{file_name_prefix}_{suncraft_database_file.split(".")[0]}', body)
     return()
 def run_file_filter():
@@ -33,4 +33,4 @@ def run_file_pictures():
 
 
 
-run_file_all()
+run_file_csv()
