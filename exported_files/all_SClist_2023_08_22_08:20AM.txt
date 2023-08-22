@@ -1,21 +1,7 @@
-|14301|            TS134MB| Black
-|14300|            TS137MB| Black
-|14233|            TS164MB| Black
-|14234|            TS167MB| Black
-|14307|            SS150MB| Black
-|14309|             6840MB| Black
-|14308|             6800MB| Black
-|14280|           780070MB| Black
-|14303|            FP143MB| Black
-|14302|            FP142MB| Black
-|14306|           TD2512MB| Black
-|80248|          CTD3000MB| Black
-|80249|          CTD3200MB| Black
-|14305|             090NMB| Black
-|14304|             S188MB| Black
 |10002|               600S| Chrome
 |10000|              600S2| Chrome
 |10265|             600CLB| Chrome
+|10286|            600CL11| Chrome
 |10003|              630D1| Chrome
 |10004|              630D2| Chrome
 |10006|             630D4W| White
@@ -47,7 +33,6 @@
 |80194|              C6800| Chrome
 |80193|         C6800SNPVD| Nickel
 |80192|           C6800ORB| Oil Rubbed Bronze
-|14308|             6800MB| Black
 |10256|               6840| Chrome
 |14239|          6840SNPVD| Nickel
 |14237|            6840ORB| Oil Rubbed Bronze
@@ -55,10 +40,10 @@
 |80195|              C6840| Chrome
 |80196|         C6840SNPVD| Nickel
 |80197|           C6840ORB| Oil Rubbed Bronze
-|14309|             6840MB| Black
 |10282|               7800| Chrome
 |10284|               7840| Chrome
 |10265|             600CLB| Chrome
+|10286|            600CL11| Chrome
 |10027|               6425| Chrome
 |10032|               6426| Chrome
 |10028|               6430| Chrome
@@ -150,7 +135,6 @@
 |14271|       780070SNPVDF| Nickel
 |10252|              68005| White
 |25104|            A002504| Mid Gray
-|14280|           780070MB| Black
 |10326|           780059SS| Chrome
 |10327|           780059SN| Nickel
 |10329|          780059ORB| Oil Rubbed Bronze
@@ -263,7 +247,6 @@
 |80207|           CS188ORB| Oil Rubbed Bronze
 |80040|         CS188SNPVD| Nickel
 |80041|       CS188CPBRPVD| Chrome
-|14304|             S188MB| Black
 |11113|            S18803A| Mid Gray
 |11039|              S1881| Black
 |11114|            S18803W| White
@@ -351,7 +334,6 @@
 |80045|        C090NPBRPVD| Brass
 |80051|            C090NSN| Nickel
 |80177|           C090NORB| Oil Rubbed Bronze
-|14305|             090NMB| Black
 |20014|               S614| Chrome
 |20015|         S614PBRPVD| Brass
 |20016|               S814| Chrome
@@ -492,7 +474,6 @@
 |80161|          CTS137ORB| Oil Rubbed Bronze
 |80109|           CTS137BK| Black
 |80107|            CTS137W| White
-|14300|            TS137MB| Black
 |10153|              TS147| Chrome
 |10157|            TS14712| Chrome
 |10101|              TS134| Chrome
@@ -509,7 +490,6 @@
 |80098|           CTS134SN| Nickel
 |80162|          CTS134ORB| Oil Rubbed Bronze
 |80097|            CTS134W| White
-|14301|            TS134MB| Black
 |10148|              TS144| Chrome
 |10106|              TS132| Chrome
 |10107|           TS132PBR| Brass
@@ -567,8 +547,6 @@
 |80069|          CTS167ORB| Oil Rubbed Bronze
 |80124|            CTS167W| White
 |80260|           CTS167MB| Black
-|14234|            TS167MB| Black
-|80260|           CTS167MB| Black
 |10174|              TS174| Chrome
 |10228|            TS174SP| Chrome
 |10158|              TS164| Chrome
@@ -584,7 +562,6 @@
 |80120|           CTS164SN| Nickel
 |80089|          CTS164ORB| Oil Rubbed Bronze
 |80115|            CTS164W| White
-|14233|            TS164MB| Black
 |10177|              TS177| Chrome
 |10192|              TS122| Chrome
 |10218|            TS122FM| Chrome
@@ -634,7 +611,6 @@
 |10213|       TD25121SNPVD| Nickel
 |10209|            TD25005| Brass
 |10186|            TD38121| Black
-|14306|           TD2512MB| Black
 |10184|             TD2505| Chrome
 |10191|             TD5005| Chrome
 |10239|           TD5005SN| Nickel
@@ -651,12 +627,10 @@
 |80130|          CTD3000SN| Nickel
 |80136|         CTD3000ORB| Oil Rubbed Bronze
 |80248|          CTD3000MB| Black
-|80248|          CTD3000MB| Black
 |80132|            CTD3200| Chrome
 |80133|      CTD3200PBRPVD| Brass
 |80134|       CTD3200SNPVD| Nickel
 |80137|         CTD3200ORB| Oil Rubbed Bronze
-|80249|          CTD3200MB| Black
 |80249|          CTD3200MB| Black
 |80135|            CTD4000| Chrome
 |10275|            TD25401| Chrome
@@ -689,7 +663,6 @@
 |80070|             CFP142| Chrome
 |80071|          CFP142PBR| Brass
 |80072|           CFP142SN| Nickel
-|14302|            FP142MB| Black
 |10155|              FP143| Chrome
 |11151|           FP143PBR| Brass
 |10203|            FP143SN| Nickel
@@ -698,7 +671,6 @@
 |80073|             CFP143| Chrome
 |80074|          CFP143PBR| Brass
 |80075|           CFP143SN| Nickel
-|14303|            FP143MB| Black
 |14021|              SS150| Chrome
 |14022|        SS150PBRPVD| Brass
 |14023|         SS150SNPVD| Nickel
@@ -710,7 +682,6 @@
 |80056|        CSS150SNPVD| Nickel
 |80059|          CSS150ORB| Oil Rubbed Bronze
 |80057|             CSS130| Chrome
-|14307|            SS150MB| Black
 |10149|            TS100RK| Chrome
 |10233|         TS100RKPBR| Brass
 |10267|          TS100RKSN| Nickel
@@ -903,4 +874,4 @@
 8800ff | 99999 -> https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/621
 77cc77 | 88888 -> https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/621
 ffffff | -upc- -> https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/622
-['Tools', 'Shower Heads', 'Bathroom Sink Accessories', 'Tub Drains', 'Bathroom Sink Drains', 'Glass Vessels', 'Kitchen & Accessories', 'Special', 'Toilet Accessories', 'Shower Accessories', 'Glass Vessel Accessories', 'Various Items', 'Tub Spout', 'Tub Accessories', 'Hand Held', 'Push & Lock', 'Hose', 'Escutcheon', 'One Piece', 'Washer', 'Mount', 'Parts', 'Aerator', 'Diverter', 'Drinking faucet', 'Overflow Faceplate', 'Rain', 'Lever', 'Lift and Turn', 'Kit', 'Strainer Assembly', 'Facet Pull Out Sprayer', 'Shower Supply Elbow', 'Vacuum breaker', 'Pipe Cutter', 'Flow Control', 'Vessel Mount', 'Shower Arm', 'Filler', 'Pop Up', 'Facet Washer Bibb Chest', 'Rinse Spray', 'Adjustable Spray', 'Drop In', 'Faucet', 'Tailpiece', 'Wrench', 'Single Function', 'Clicker Style', 'Facet Washer', 'Grid Drain', 'Various Items', 'SUBCATEGORYNAME', 'Flange', 'Hose Connection', 'Faucet Seat', 'U Shape', 'Spray Head', '1.75 GPM', 'Plug Wrench', '3/4" IPS', '10 Sizes', '5 Function', '®Mixet Style 4', 'Free Rotateing Connector Nut', 'Spin and Seal', '1 1/4" (Fine Thread)', 'Flow Control', 'Strap Wrench', 'Adjustable', 'Telescoping Adjustable Feature', '1 1/2" (Coarse Thread)', 'Wall Mount', '7"D', 'Single Function', '59-80" hose', 'Pop Up Assembly', 'Deep Cup', 'Hook', '1 hole', 'Button', 'Straight', 'Parts', 'PVC', 'Duplex', '2.5 GPM', '6"D', 'Rear Diverter', 'Tapered', 'Two Piece', 'Clicker Stopper', '8"', 'Socket Wrench', 'Kit', 'Round', 'Sillcock Key', 'Nut Wrench', '1/2" IPS', 'Basket', 'Adjustable Spray', '2.0 GPM', 'Clog Resistant', '1.2 GPM', '1.5 GPM', 'Flush Mount', 'Jewel Series', 'Grid Drain', 'L Shape', 'Nipple Extractor', 'Spud Chuck', 'Arm Mount', 'nose mount', 'Beveled', 'Hose Guide', 'Bracket', 'Escutchon', 'No Overflow', '2 Holes', 'Flat', 'Strainer Wrench', 'Convert', 'No Diverter', 'Slip Fit 5/8" OD', 'Jaws', 'Jet', 'Carded', 'Rear Mount', 'De-burring Tool', 'Front Diverter', 'Step', '1.8 GPM', 'Cartridge Puller', '2.2 GPM', 'Copper Pipe', 'Hose', 'Stopper', 'Three Piece', 'Industrial', 'Dome', 'Jr Duo', 'Stainless Steel', 'pliers', 'Plastic', 'Square', 'TAGNAME', 'Economy', 'Half & Half', 'Pop Up', '1-4-All Universal Fit', 'With Overflow', '4.5"D', 'All Brass', 'Swivel Connector', 'Basin Wrench', 'Zinc', '1.75"D', 'Massage', 'S Shape', 'Water Saving', 'Hose Connection', 'Wide']
+['Shower Accessories', 'Tub Drains', 'Shower Heads', 'Tub Spout', 'Glass Vessel Accessories', 'Kitchen & Accessories', 'Tub Accessories', 'Glass Vessels', 'Various Items', 'Bathroom Sink Drains', 'Bathroom Sink Accessories', 'Toilet Accessories', 'Tools', 'One Piece', 'Flange', 'Rinse Spray', 'Drop In', 'Lift and Turn', 'Single Function', 'Various Items', 'Vacuum breaker', 'Shower Supply Elbow', 'Washer', 'Hose Connection', 'Facet Washer', 'SUBCATEGORYNAME', 'Diverter', 'Facet Pull Out Sprayer', 'Kit', 'Push & Lock', 'Pipe Cutter', 'Wrench', 'Tailpiece', 'Filler', 'Mount', 'Pop Up', 'Adjustable Spray', 'Grid Drain', 'Strainer Assembly', 'Aerator', 'Escutcheon', 'Lever', 'Hose', 'Overflow Faceplate', 'Rain', 'Clicker Style', 'Hand Held', 'Parts', 'Drinking faucet', 'Shower Arm', 'Flow Control', 'Faucet', 'Facet Washer Bibb Chest', 'Vessel Mount', 'Sillcock Key', 'Strainer Wrench', '1 1/4" (Fine Thread)', 'Basin Wrench', 'Carded', 'Hose Connection', 'Clog Resistant', 'Jewel Series', 'Jet', 'Step', '®Mixet Style 4', 'Plug Wrench', '2.0 GPM', 'Adjustable Spray', 'Water Saving', 'Stainless Steel', 'No Diverter', 'Beveled', 'Escutchon', 'U Shape', '1.75 GPM', 'De-burring Tool', 'Copper Pipe', 'With Overflow', 'Pop Up Assembly', 'Dome', 'Stopper', '1.75"D', 'Strap Wrench', 'Adjustable', 'Clicker Stopper', '4.5"D', '2.2 GPM', '1.8 GPM', '59-80" hose', 'Duplex', 'Jaws', 'Rear Mount', '1 hole', '3/4" IPS', 'No Overflow', 'Wide', 'Swivel Connector', 'PVC', 'Convert', 'Pop Up', 'Deep Cup', 'Three Piece', 'Half & Half', 'Spud Chuck', 'Industrial', '8"', 'Zinc', 'Two Piece', 'pliers', 'Faucet Seat', 'Parts', 'Socket Wrench', 'Flow Control', 'Economy', 'Hook', '7"D', '1-4-All Universal Fit', '10 Sizes', 'Tapered', 'Hose Guide', 'Wall Mount', 'Kit', 'nose mount', 'Nipple Extractor', '1 1/2" (Coarse Thread)', 'Arm Mount', '2 Holes', 'Massage', '1.5 GPM', 'Nut Wrench', 'Spin and Seal', 'Cartridge Puller', 'Flat', '1.2 GPM', 'Slip Fit 5/8" OD', 'Round', 'Straight', 'Telescoping Adjustable Feature', '5 Function', 'L Shape', 'Single Function', 'Plastic', 'Free Rotateing Connector Nut', 'Square', '6"D', 'Button', 'Grid Drain', 'Rear Diverter', 'Jr Duo', 'Hose', 'Flush Mount', 'Front Diverter', 'All Brass', '2.5 GPM', 'Bracket', 'Basket', '1/2" IPS', 'TAGNAME', 'S Shape', 'Spray Head']

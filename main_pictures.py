@@ -18,13 +18,18 @@ for e in range(meta["pagination"]["pageCount"]):
     for i in product_list:
         product_dict[i["id"]] = i["attributes"]
     
-    print(e + 1)
+    print(f'Processing...   {e + 1}')
 
-print(len(product_dict))
+print(f'{len(product_dict)} product pages')
 
 
-with open(f"downloaded_json_dbs/{now}.json", "w") as f:
+with open(f"{now}.json", "w") as f:
 
     json.dump(obj = product_dict, fp = f, indent=4, sort_keys=True)
 
 # print(strftime("Suncraft_Item_List_%A_%B_%d_%Y_%I:%M%p"))
+
+# https://admin.suncraftind.com/api/products/?populate=*
+# https://admin.suncraftind.com/api/plugins/upload/?populate=*
+
+# https://admin.suncraftind.com/dashboard/plugins/upload?sort=createdAt:DESC&page=1&pageSize=20
