@@ -4,15 +4,23 @@ def read_it_csv_for_db_pages(imported_dict):
     product_page_list = list() # This holds the information for this loop don't remove it
 
     for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
+        parts_list = part(imported_dict, pages_id, False)
 
-        meta_name_list = meta_name(imported_dict, pages_id, False, "- ")
-        meta_data_list = meta_data(imported_dict, pages_id, False)
-        meta_dict = dict(zip(meta_name_list, meta_data_list))
+        try:
+            parts_list.remove("====")
+        except ValueError:
+            parts_list = parts_list
+            
 
-        upc_list = upc(imported_dict, pages_id, False)
-        part_list = part(imported_dict, pages_id, False)
-        parts_dict = dict(zip(part_list, upc_list))
-        color_list_hex = color_hex(imported_dict, pages_id)
+        m_partnumber_to_m_data_dict = dict(zip(meta_name(imported_dict, pages_id, False, "- "), meta_data(imported_dict, pages_id, False)))
+        for i in parts_list:
+            data_list = m_partnumber_to_m_data_dict[i]
+
+        c_partnumber_to_c_upc_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
+        
+        c_partnumber_to_c_hex_dict = dict(zip(part(imported_dict, pages_id, False), color_hex(imported_dict, pages_id, False)))
+
+
 
         #Page
         product_page_list.append({
@@ -21,9 +29,9 @@ def read_it_csv_for_db_pages(imported_dict):
                 "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "sub", False)),
                 "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tag", False)),
                 "Discription":description(imported_dict, pages_id),
-                "UPC list":",".join(upc_list),
-                "Part # list":",".join(part_list),
-                "Extra Info list":",".join(meta_data_list),
+                "UPC list":",".join(),
+                "Part # list":",".join(parts_list),
+                "Extra Info list":",".join(data_list),
                 "color":""
                 })
         
