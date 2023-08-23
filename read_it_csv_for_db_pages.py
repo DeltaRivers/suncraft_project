@@ -10,15 +10,33 @@ def read_it_csv_for_db_pages(imported_dict):
             parts_list.remove("====")
         except ValueError:
             parts_list = parts_list
-            
 
-        m_partnumber_to_m_data_dict = dict(zip(meta_name(imported_dict, pages_id, False, "- "), meta_data(imported_dict, pages_id, False)))
+
+        m_partnumber_to_m_data_dict = dict(zip(meta_name(imported_dict, pages_id, False, "- "), meta_data(imported_dict, pages_id, False, ",")))
+        data_list = list()
         for i in parts_list:
-            data_list = m_partnumber_to_m_data_dict[i]
+            try:
+                data_list.append(m_partnumber_to_m_data_dict[i])
+            except KeyError:
+                data_list.append("")
+
 
         c_partnumber_to_c_upc_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
-        
+        upc_list = list()
+        for i in parts_list:
+            try:
+                upc_list.append(c_partnumber_to_c_upc_dict[i])
+            except KeyError:
+                upc_list.append("")
+
+
         c_partnumber_to_c_hex_dict = dict(zip(part(imported_dict, pages_id, False), color_hex(imported_dict, pages_id, False)))
+        hex_list = list()
+        for i in parts_list:
+            try:
+                hex_list.append(c_partnumber_to_c_hex_dict[i])
+            except KeyError:
+                hex_list.append("")
 
 
 
@@ -29,10 +47,10 @@ def read_it_csv_for_db_pages(imported_dict):
                 "Subcategories": ", ".join(list_groups_as_string(imported_dict, pages_id, "sub", False)),
                 "Tags":", ".join(list_groups_as_string(imported_dict, pages_id, "tag", False)),
                 "Discription":description(imported_dict, pages_id),
-                "UPC list":",".join(),
+                "UPC list":",".join(upc_list),
                 "Part # list":",".join(parts_list),
                 "Extra Info list":",".join(data_list),
-                "color":""
+                "color":",".join(hex_list)
                 })
         
     return product_page_list
