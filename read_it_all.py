@@ -1,4 +1,4 @@
-from suncraft_parsing import color_hex, list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url
+from suncraft_parsing import color_hex, list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url, hex_to_color_name_dict
 
 
 def read_it_all(imported_dict):
@@ -6,27 +6,6 @@ def read_it_all(imported_dict):
     all_cat = set()
     all_subcat = set()
     all_tags = set()
-    hex_to_color_dict = {
-        "":"",
-        "afb5b8":"Chrome", 
-        "b3a046":"Brass", 
-        "929084":"Nickel", 
-        "3e281e":"Oil Rubbed Bronze", 
-        "cfab55":"Gold",
-        "242424":"Black", 
-        "eaeaea":"White", 
-        "666666":"Mid Gray",
-        "ff0000":"Red", 
-        "ff6600":"Orange", 
-        "ffdd00":"Yellow", 
-        "00aa00":"Green", 
-        "009999":"Turquoise",
-        "002eff":"Blue",
-        "992200":"Brown",
-        "e0ddcb":"Almond",
-        "d0ffed":"Clear Glass", 
-        "11aa66":"French Green Glass",
-        }
 
     number_of_parts_list = list()
     counts = dict()
@@ -54,7 +33,7 @@ def read_it_all(imported_dict):
         no = ""
         for i in parts_dict:
             try:
-                product_page += (f'|{str.rjust(parts_dict[i], 5)}| {str.rjust(i + "|", 18 + 1)} {hex_to_color_dict[str.lower(color_dict[parts_dict[i]])]}\n')
+                product_page += (f'|{str.rjust(parts_dict[i], 5)}| {str.rjust(i + "|", 18 + 1)} {hex_to_color_name_dict[str.lower(color_dict[parts_dict[i]])]}\n')
             except KeyError:
                 product_page += (f'{color_dict[parts_dict[i]]} | {parts_dict[i]} -> {admin_url(pages_id)}\n')
                 print(name(imported_dict, pages_id))
