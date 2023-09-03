@@ -12,7 +12,7 @@ def read_it_filter(imported_dict):
     for pages_id in sorted(imported_dict, key = lambda pages_id: int(imported_dict[pages_id]["rank"])):
         product_page = "" # This holds the information for this loop don't remove it
         part_name_max_length = max([len(i) for i in part(imported_dict, pages_id, False)])
-        this_group = list_groups_as_string(imported_dict,pages_id,type_of_group,False)
+        this_group = list_groups_as_string(imported_dict, pages_id, type_of_group,False)
 
         for i in looking_for:
             any_of_these = i
