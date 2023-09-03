@@ -39,4 +39,4 @@ def run_file_test():
     return()
 
 
-run_file_test()
+run_file_all()

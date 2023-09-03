@@ -155,17 +155,19 @@ def file_saving_tsv(filename:str, dict_list:list):
 
 def meta_name(imported_dict, id, string = True, remove = '', replace_with = ''):
     listed = [str(i["name"]) for i in imported_dict[id]["Meta"]]
-    re_pattern = "*".join(list(remove)) + "*"
-    clean_list = [re.sub(re_pattern,replace_with,i) for i in listed]
-    return " ".join(clean_list) + "\n" if string else clean_list
+    if remove != "":
+        re_pattern = "*".join(list(remove)) + "*"
+        listed = [re.sub(re_pattern,replace_with,i) for i in listed]
+    return " ".join(listed) + "\n" if string else listed
 
 def meta_data(imported_dict, id, string = True, remove = '', replace_with = ''):
     # listed = [i["value"] for i in imported_dict[id]["Meta"]]      
     # return " ".join(listed) + "\n" if string else listed
     listed = [str(i["value"]) for i in imported_dict[id]["Meta"]]
-    re_pattern = "*".join(list(remove)) + "*"
-    clean_list = [re.sub(re_pattern,replace_with,i) for i in listed]
-    return " ".join(clean_list) + "\n" if string else clean_list
+    if remove != "":
+        re_pattern = "*".join(list(remove)) + "*"
+        listed = [re.sub(re_pattern,replace_with,i) for i in listed]
+    return " ".join(listed) + "\n" if string else listed
 
 
 def name(imported_dict, id):
