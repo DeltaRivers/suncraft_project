@@ -37,7 +37,8 @@ def read_it_all(imported_dict):
             except KeyError:
                 product_page += (f'{color_dict[parts_dict[i]]} | {parts_dict[i]} -> {admin_url(pages_id)}\n')
                 print(name(imported_dict, pages_id))
-        body += product_page 
+        body += product_page
+
     # Lists of all the cat-sub-tags for when this is used in a filtered version.
     # body += "Categories: " + ", ".join(all_cat) + "\n"
     # body += "Subcategories: " + ", ".join(all_subcat) + "\n"

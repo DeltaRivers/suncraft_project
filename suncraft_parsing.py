@@ -169,7 +169,6 @@ def meta_data(imported_dict, id, string = True, remove = '', replace_with = ''):
         listed = [re.sub(re_pattern,replace_with,i) for i in listed]
     return " ".join(listed) + "\n" if string else listed
 
-
 def name(imported_dict, id):
     output = imported_dict[id]["name_product"]
     return output

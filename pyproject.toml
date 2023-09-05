@@ -1,0 +1,2 @@
+[tool.pyproject.run]
+source=["..*.py"]
