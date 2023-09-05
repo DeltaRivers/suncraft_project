@@ -3,14 +3,15 @@ import traceback, re, csv, glob
 
 hex_to_color_name_dict = {
     "":"",
+    "eee":"None",
     "afb5b8":"Chrome", 
     "b3a046":"Brass", 
     "929084":"Nickel", 
-    "3e281e":"Oil Rubbed Bronze", 
+    "3e281e":"Bronze", 
     "cfab55":"Gold",
     "242424":"Black", 
     "eaeaea":"White", 
-    "666666":"Mid Gray",
+    "666666":"Gray",
     "ff0000":"Red", 
     "ff6600":"Orange", 
     "ffdd00":"Yellow", 
@@ -19,8 +20,8 @@ hex_to_color_name_dict = {
     "002eff":"Blue",
     "992200":"Brown",
     "e0ddcb":"Almond",
-    "d0ffed":"Clear Glass", 
-    "11aa66":"French Green Glass",
+    "d0ffed":"Clear", 
+    "11aa66":"French", # French Green Glass
     }
 
 def admin_url(id):

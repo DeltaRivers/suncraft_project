@@ -1,7 +1,7 @@
 import requests, json, time
 from pprint import pprint
 
-now = time.strftime("SClist_%Y_%m_%d_%I:%M%p%s")
+now = time.strftime("SClist_%Y_%m_%d_%I:%M%p")
 #Ths is the long version, but now i'm changing the way it looks soooo.
 #                     Suncraft_Item_List_Tuesday_June_20_2023_02:02PM
 #now = time.strftime("Suncraft_Item_List_%A_%B_%d_%Y_%I:%M%p")

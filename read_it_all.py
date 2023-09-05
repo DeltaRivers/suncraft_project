@@ -1,5 +1,5 @@
 from suncraft_parsing import color_hex, list_groups_as_string, name, description, meta_data, meta_name, part, upc, catsubtag_block, line, admin_url, hex_to_color_name_dict
-
+import re
 
 def read_it_all(imported_dict):
     body = ""
@@ -23,34 +23,35 @@ def read_it_all(imported_dict):
         all_tags.update(list_groups_as_string(imported_dict, pages_id,"tag", False))
 
         # Making dicts of these things - may make this a function later
+        parts_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
+        upc_dict = dict(zip(upc(imported_dict, pages_id, False), part(imported_dict, pages_id, False)))
+
         meta_dict = dict(zip(meta_name(imported_dict, pages_id, False, "- "), meta_data(imported_dict, pages_id, False)))
         color_dict = dict(zip(upc(imported_dict, pages_id, False), color_hex(imported_dict, pages_id, False)))
-        parts_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
-        number_of_parts_list.append(len(parts_dict))
+
+
         #The actual page formatting
         #product_page += \
             # f'\n\n{name(imported_dict, pages_id)}' + f'   -> {admin_url(pages_id)}\n' 
         no = ""
-        for i in parts_dict:
-            try:
-                product_page += (f'|{str.rjust(parts_dict[i], 5)}| {str.rjust(i + "|", 18 + 1)} {hex_to_color_name_dict[str.lower(color_dict[parts_dict[i]])]}\n')
-            except KeyError:
-                product_page += (f'{color_dict[parts_dict[i]]} | {parts_dict[i]} -> {admin_url(pages_id)}\n')
-                print(name(imported_dict, pages_id))
+        for i in parts_dict: # i is the part number
+                try:
+                    if hex_to_color_name_dict[str.lower(color_dict[parts_dict[i]])] in ["Chrome", "Nickel", "Bronze", "Brass", "Black", "White"] \
+                        and hex_to_color_name_dict[str.lower(color_dict[parts_dict[i]])] not in str(re.sub("[,.)(]", "", meta_dict[i])).split(" "):
+
+                        product_page += (f'|{str.rjust(parts_dict[i], 5)}| {str.rjust(meta_dict[i], 60)} | {hex_to_color_name_dict[str.lower(color_dict[parts_dict[i]])]} {admin_url(pages_id)}\n')
+                except KeyError:
+                    product_page += (f'{color_dict[parts_dict[i]]} | {parts_dict[i]} -> {admin_url(pages_id)}\n')
+                    print(name(imported_dict, pages_id))
         body += product_page
 
     # Lists of all the cat-sub-tags for when this is used in a filtered version.
     # body += "Categories: " + ", ".join(all_cat) + "\n"
     # body += "Subcategories: " + ", ".join(all_subcat) + "\n"
     # body += "Tags: " + ", ".join(all_tags) + "\n"
-    all_list = list(all_cat) + list(all_subcat) + list(all_tags)
-    body += str(all_list)
+    # all_list = list(all_cat) + list(all_subcat) + list(all_tags)
+    # body += str(all_list)
     
-    for i in number_of_parts_list:
-        counts[i] = counts.get(i, 0) + 1
-
-    for i in counts:
-        print(f'{counts[i]},{i}')
 
     return body
 
