@@ -163,7 +163,7 @@ all_list = [
 
 
 filepath = "downloaded_json_dbs/"
-suncraft_database_file = "SClist_2023_09_05_04:14PM.json"
+suncraft_database_file = "SClist_2023_09_06_08:20AM.json"
 
 looking_for = all_list # Spelling and case sensitive at least at the moment, must be a list
 

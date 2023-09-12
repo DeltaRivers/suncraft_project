@@ -1,0 +1,70 @@
+|10002|             Plastic, with Stainless Steel Clad Top & Plunger | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/54
+|10000|              Plastic with Stainless Steel Clad Top & Plunger | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/1
+|10265|        Plastic with 304 Stainless Steel clad top and plunger | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/637
+|10286|                                                  Grid insert | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/637
+|10282|                                          304 Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/628
+|10284|                                          304 Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/639
+|10265|        Plastic with 304 Stainless Steel clad top and plunger | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/219
+|10286|                                            Grid Drain Insert | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/219
+|10283|                                          304 Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/638
+|10295|                                 Polished 304 Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/615
+|14040|                                                      Stopper | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/216
+|10248|                                  For Grid Drains, fits to OD | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/304
+|10290|                                  For Grid Drains, Fits to ID | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/304
+|10291|                                For Pop up Drains, fits to OD | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/304
+|80204|                      Carded kit, for Grid Drains, fits to OD | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/304
+|80205|                    Carded kit, for Pop up Drains, fits to OD | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/304
+|14173|                                     Polished Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/592
+|10026|                                                 Hardware kit | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/566
+|10065|                                                      Plunger | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/566
+|10070|                                                   Top Flange | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/566
+|20102|                                                Drain Stopper | White https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/599
+|10297|                            Clicker Plunger (Stainless Steel) | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/601
+|10326|                    59mm OD Clicker Plunger (Stainless Steel) | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/601
+|10326|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/613
+|80233|                                      Stainless Steel, Carded | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/613
+|10286|                                    Polished Stainless Steel  | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/335
+|10289|                              Replacement Center for the 6409 | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/305
+|10051|                               600S, 600S2 (Stainless Steel)  | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/551
+|10182|                                          630E2, 630E1, 630E8 | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/558
+|10069|                                          630E2, 630E1, 630E8 | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/558
+|10092|                                          630E2, 630E1, 630E8 | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/561
+|11187|                                                6 Inch, Round | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11188|                                                8 Inch, Round | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11189|                                               10 Inch, Round | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11195|                                               12 Inch, Round | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11196|                                               8 Inch, Square | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11197|                                              10 Inch, Square | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11198|                                              12 Inch, Square | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/253
+|11158|                          Includes: PSSB002, PSH59-SS, PSC450 | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/368
+|11120|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/318
+|11069|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/325
+|11072|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/326
+|11057|                                            (Stainless Steel) | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/323
+|80158|                                      Stainless Steel, Carded | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/323
+|11059|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/324
+|11059|                                         Stainless Steel, 59" | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/606
+|11069|                                         Stainless Steel, 69" | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/606
+|11072|                                         Stainless Steel, 80" | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/606
+|11057|                              Stainless Steel, Stretch 59-80" | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/606
+|80158|                      Stainless Steel, Stretch 59-80", Carded | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/606
+|10275|          Wide stopper, duel threaded post fits 3/8" and 1/4" | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/187
+|10138|                                             Tiptoe Tub Drain | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/65
+|10275|                                                      Stopper | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/620
+|12164|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/394
+|12165|                                                  Basket only | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/394
+|12166|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/396
+|12169|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/397
+|12171|                                     Stainless Steel Assembly | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/399
+|12172|                                              For Basket Only | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/399
+|12176|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/401
+|12178|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/402
+|12179|                                              Stainless Steel | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/403
+|12181|                             Basket only, with Rubber Stopper | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/406
+|12182|                        Basket only, with Solid Brass Stopper | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/406
+|12156|                                                        Clear | White https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/404
+|12110|                                                    Hose only | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/409
+|12122|                                                 Hose and Kit | Chrome https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/409
+|14168|                                                  Clear Vinyl | White https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/591
+999 | 99999 -> https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/621
+ffffff | -upc- -> https://admin.suncraftind.com/dashboard/content-manager/collectionType/api::product.product/622

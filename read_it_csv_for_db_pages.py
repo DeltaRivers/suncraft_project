@@ -16,9 +16,12 @@ def read_it_csv_for_db_pages(imported_dict):
         data_list = list()
         for i in parts_list:
             try:
-                data_list.append(m_partnumber_to_m_data_dict[i])
+                if m_partnumber_to_m_data_dict[i] == " ":
+                    data_list.append("AXAXAX")
+                else:
+                    data_list.append(m_partnumber_to_m_data_dict[i])
             except KeyError:
-                data_list.append("")
+                data_list.append("AXAXAX No Meta")
 
 
         c_partnumber_to_c_upc_dict = dict(zip(part(imported_dict, pages_id, False), upc(imported_dict, pages_id, False)))
@@ -27,7 +30,7 @@ def read_it_csv_for_db_pages(imported_dict):
             try:
                 upc_list.append(c_partnumber_to_c_upc_dict[i])
             except KeyError:
-                upc_list.append("")
+                upc_list.append("BXBXBX No UPC")
 
 
         c_partnumber_to_c_hex_dict = dict(zip(part(imported_dict, pages_id, False), color_hex(imported_dict, pages_id, False)))
@@ -36,7 +39,7 @@ def read_it_csv_for_db_pages(imported_dict):
             try:
                 hex_list.append(c_partnumber_to_c_hex_dict[i])
             except KeyError:
-                hex_list.append("")
+                hex_list.append("CXCXCX No ColorHex")
 
 
 
@@ -50,7 +53,8 @@ def read_it_csv_for_db_pages(imported_dict):
                 "UPC list":",".join(upc_list),
                 "Part # list":",".join(parts_list),
                 "Extra Info list":",".join(data_list),
-                "color":",".join(hex_list)
+                "color":",".join(hex_list),
+                "Page ID":pages_id
                 })
         
     return product_page_list
